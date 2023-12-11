@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: whoami-ingress
+  annotations:
+    # Use Traefik as the Ingress controller
+    kubernetes.io/ingress.class: traefik
+    # Add Cert-Manager SSL certificates as the name of the ClusterIssuer resource
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  # TLS configuration for HTTPS
+  tls:
+    # TLS secretName used on ClusterIssuer
+    - secretName: letsencrypt-production.key
+      hosts:
+        - whoami.hensen.io
+  rules:
+  - host: whoami.hensen.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: whoami
+            port:
+              name: web
