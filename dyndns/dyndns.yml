@@ -17,4 +17,11 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/dyndns
+          image: hebury/secret-test
+    volumes:
+    - name: secret-vol
+      secret:
+        secretName: transip-api-ssh
+    - name: config
+      configMap:
+        name: dyndns-config
