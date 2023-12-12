@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/secret-test
+          image: hebury/secret-test:1.1
     volumes:
     - name: secret-vol
       secret:
