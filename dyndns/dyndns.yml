@@ -18,6 +18,13 @@ spec:
       containers:
         - name: dyndns
           image: hebury/secret-test:1.3
+          volumeMounts:
+            - name: secret-vol
+              mountPath: "/secret"
+              readOnly: true
+            - name: config
+              mountPath: "/config"
+              readOnly: true
     volumes:
     - name: secret-vol
       secret:
