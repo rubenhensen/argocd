@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dyndns
+  labels:
+    app: dyndns
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dyndns
+  template:
+    metadata:
+      labels:
+        app: dyndns
+    spec:
+      containers:
+        - name: dyndns
+          image: hebury/dyndns

@@ -1,19 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: whoami
+  name: nas-nfs
 spec:
   project: default
   source:
     repoURL: https://github.com/rubenhensen/argocd.git
     targetRevision: HEAD
-    path: whoami
+    path: nas-nfs
   destination:
     server: https://kubernetes.default.svc
-    namespace: whoami
+    namespace: kube-system
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
