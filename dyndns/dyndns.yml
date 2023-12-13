@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/dyndns:1.15
+          image: hebury/dyndns:1.16
           volumeMounts:
             - name: secret-vol
               mountPath: "/secret/ssh-privatekey"
