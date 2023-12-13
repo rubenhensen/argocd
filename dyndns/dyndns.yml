@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/dyndns:1.6
+          image: hebury/dyndns:1.7
           volumeMounts:
             - name: secret-vol
               mountPath: "/secret"
