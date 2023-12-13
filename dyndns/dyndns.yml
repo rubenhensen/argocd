@@ -23,7 +23,7 @@ spec:
               mountPath: "/secret"
               readOnly: true
             - name: config
-              mountPath: "/go-transip-dyndns.toml"
+              mountPath: "/etc/go-transip-dyndns.toml"
               subPath: "go-transip-dyndns.toml"
               readOnly: true
       volumes:
