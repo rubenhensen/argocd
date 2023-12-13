@@ -27,7 +27,7 @@ update-frequency = 1
 #
 # Your account name on transip.
 #
-username = "rubenhensen"
+username = "hebury"
 #
 # Private key to get access the API.
 # Create your own key here: https://www.transip.nl/cp/account/api/.
