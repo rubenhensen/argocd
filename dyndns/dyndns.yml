@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: jlentink/go-transip-dyndns:latest
+          image: hebury/dyndns:1.0
           volumeMounts:
             - name: secret-vol
               mountPath: "/secret"
