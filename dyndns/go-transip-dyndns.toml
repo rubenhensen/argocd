@@ -49,7 +49,7 @@ username = "rubenhensen"
 #
 # Mind the """content""" (3x) quote for including the key in the config and the "path" (1) for the path...
 #
-private-key = "/secret-vol/transip-api-ssh/ssh-privatekey"
+private-key = "/secret/ssh-privatekey"
 
 #
 # The DNS record you want to update.
