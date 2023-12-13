@@ -1,4 +1,4 @@
-# kubectl create configmap go-transip-dyndns --from-file=dyndns/go-transip-dyndns.toml --dry-run=client -o yaml > dyndns/dyndns-configmap.yml
+# kubectl create configmap go-transip-dyndns-configmap --from-file=dyndns/go-transip-dyndns.toml --dry-run=client -o yaml > dyndns/dyndns-configmap.yml
 
 [general]
 #

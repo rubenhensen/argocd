@@ -23,7 +23,7 @@ spec:
               mountPath: "/secret"
               readOnly: true
             - name: config
-              mountPath: "/config"
+              mountPath: "/"
               readOnly: true
       volumes:
       - name: secret-vol
