@@ -20,7 +20,8 @@ spec:
           image: hebury/dyndns:1.8
           volumeMounts:
             - name: secret-vol
-              mountPath: "/secret"
+              mountPath: "/secret/ssh-privatekey"
+              subPath: "ssh-privatekey"
               readOnly: true
             - name: config
               mountPath: "/etc/go-transip-dyndns.toml"
