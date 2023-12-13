@@ -17,13 +17,14 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/secret-test:1.9
+          image: hebury/secret-test:1.10
           volumeMounts:
             - name: secret-vol
               mountPath: "/secret"
               readOnly: true
             - name: config
-              mountPath: "/config"
+              mountPath: "/go-transip-dyndns.toml"
+              subPath: "go-transip-dyndns.toml"
               readOnly: true
       volumes:
       - name: secret-vol
