@@ -31,4 +31,4 @@ spec:
           secretName: transip-api-ssh
       - name: config
         configMap:
-          name: dyndns-config
+          name: go-transip-dyndns-configmap
