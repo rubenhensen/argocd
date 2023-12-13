@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: dyndns
-  namespace: dyndns
 spec:
   project: default
   source:
@@ -11,7 +10,7 @@ spec:
     path: dyndns
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: dyndns
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

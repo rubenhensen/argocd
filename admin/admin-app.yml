@@ -10,7 +10,7 @@ spec:
     path: admin
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: kubernetes-dashboard
   syncPolicy:
     automated:
       prune: true
