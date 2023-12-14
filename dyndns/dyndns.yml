@@ -21,6 +21,7 @@ spec:
           volumeMounts:
             - name: secret-vol
               mountPath: /secret
+              read-only: true
           # lifecycle:
           #   postStart:
           #     exec:
@@ -30,5 +31,5 @@ spec:
           #         - cp /secret/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
       volumes:
       - name: secret-vol
-        secretName:
-          name: go-transip-dyndns.toml
+        secret::
+          secretName: go-transip-dyndns.toml
