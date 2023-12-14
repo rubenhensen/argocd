@@ -19,11 +19,11 @@ spec:
         - name: dyndns
           image: hebury/dyndns:1.16
           volumeMounts:
-            - name: secret
+            - name: secret-vol
               mountPath: "/etc/go-transip-dyndns.toml"
               subPath: "go-transip-dyndns.toml"
               readOnly: true
       volumes:
-      - name: secret
+      - name: secret-vol
         secretName:
           name: go-transip-dyndns.toml
