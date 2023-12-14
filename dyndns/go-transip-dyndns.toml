@@ -98,4 +98,123 @@ hostname = "hensen.io"
 entry = "dev"
 ttl = 86400
 type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "argocd"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "drive"
+ttl = 86400
+type = "CNAME"
 content = "rubenhensen.synology.me."
+
+[[record]]
+hostname = "hensen.io"
+entry = "ftp"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "argocd"
+ttl = 86400
+type = "CNAME"
+content = "cname.vercel-dns.com."
+
+[[record]]
+hostname = "hensen.io"
+entry = "mail"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "mbg"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "nas"
+ttl = 86400
+type = "CNAME"
+content = "rubenhensen.synology.me."
+
+[[record]]
+hostname = "hensen.io"
+entry = "photos"
+ttl = 86400
+type = "CNAME"
+content = "rubenhensen.synology.me."
+
+[[record]]
+hostname = "hensen.io"
+entry = "staging"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "whoami"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "www"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "www"
+ttl = 86400
+type = "TXT"
+content = "v=DMARC1; p=none;"
+
+[[record]]
+hostname = "hensen.io"
+entry = "transip-a._domainkey"
+ttl = 86400
+type = "CNAME"
+content = "_dkim-A.transip.email."
+
+[[record]]
+hostname = "hensen.io"
+entry = "transip-b._domainkey"
+ttl = 86400
+type = "CNAME"
+content = "_dkim-B.transip.email."
+
+[[record]]
+hostname = "hensen.io"
+entry = "transip-c._domainkey"
+ttl = 86400
+type = "CNAME"
+content = "_dkim-C.transip.email."
+
+[[record]]
+hostname = "hensen.io"
+entry = "@"
+ttl = 300
+type = "TXT"
+content = "v=spf1 ~all"
+
+[[record]]
+hostname = "hensen.io"
+entry = "@"
+ttl = 86400
+type = "TXT"
+content = "10 @"
