@@ -98,4 +98,4 @@ hostname = "hensen.io"
 entry = "dev"
 ttl = 86400
 type = "CNAME"
-content = "test"
+content = "rubenhensen.synology.me."
