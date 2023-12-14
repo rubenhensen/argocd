@@ -97,5 +97,5 @@ content = ""
 hostname = "hensen.io"
 entry = "dev"
 ttl = 60
-type = "CNAME"
+type = "MX"
 content = "test"
