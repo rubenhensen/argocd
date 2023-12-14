@@ -27,6 +27,7 @@ spec:
                 command:
                   - /bin/sh
                   - -c
+                  - ls /var/my-config/
                   - cp /var/my-config/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
       volumes:
       - name: secret-vol
