@@ -88,7 +88,14 @@ private-key = "/secret/transip.key"
 
 [[record]]
 hostname = "hensen.io"
-entry = "my-home"
+entry = "@"
 ttl = 60
 type = "A"
 content = ""
+
+[[record]]
+hostname = "hensen.io"
+entry = "dev"
+ttl = 60
+type = "CNAME"
+content = "test"
