@@ -17,12 +17,11 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/dyndns:1.16
+          image: hebury/dyndns:1.17
           volumeMounts:
             - name: secret-vol
-              mountPath: "/etc/go-transip-dyndns"
-              subPath: "go-transip-dyndns"
-              readOnly: true
+              mountPath: "/etc/go-transip-dyndns.toml"
+              subPath: "go-transip-dyndns.toml"
       volumes:
       - name: secret-vol
         secretName:
