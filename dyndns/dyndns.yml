@@ -32,7 +32,7 @@ spec:
                   - /bin/sh
                   - -c
                   - >
-                    cp /config/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
+                    ln -s /config/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
       volumes:
       - name: secret-vol
         secret:
