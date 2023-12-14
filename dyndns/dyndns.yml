@@ -20,15 +20,14 @@ spec:
           image: hebury/dyndns:1.17
           volumeMounts:
             - name: secret-vol
-              mountPath: "/var/my-config/"
+              mountPath: /secret
           lifecycle:
             postStart:
               exec:
                 command:
                   - /bin/sh
                   - -c
-                  - ls /var/my-config/
-                  - cp /var/my-config/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
+                  - cp /secret/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
       volumes:
       - name: secret-vol
         secretName:
