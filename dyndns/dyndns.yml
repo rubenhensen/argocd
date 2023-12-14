@@ -23,14 +23,11 @@ spec:
               mountPath: "/secret/ssh-privatekey"
               subPath: "ssh-privatekey"
               readOnly: true
-            - name: config
+            - name: secret
               mountPath: "/etc/go-transip-dyndns.toml"
               subPath: "go-transip-dyndns.toml"
               readOnly: true
       volumes:
-      - name: secret-vol
-        secret:
-          secretName: transip-api-ssh
-      - name: config
-        configMap:
-          name: go-transip-dyndns-configmap
+      - name: secret
+        secretName:
+          name: go-transip-dyndns
