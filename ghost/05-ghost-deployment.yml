@@ -29,7 +29,7 @@ spec:
 
       containers:
         - name: ghostk3s
-          image: hebury/ghost:1.0
+          image: ghost:5-alpine
           ports:
             - name: ghk3s
               containerPort: 2368
