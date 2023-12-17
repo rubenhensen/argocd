@@ -1,3 +1,4 @@
 *.key
 ghost/01-config.production.yml
 ghost/01-secrets.yml
+ghost/config.production.json
