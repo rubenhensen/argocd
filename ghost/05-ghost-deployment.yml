@@ -83,14 +83,14 @@ spec:
               mountPath: /tmp
               readOnly: false
           imagePullPolicy: Always
-          securityContext:
-            readOnlyRootFilesystem: true
-            allowPrivilegeEscalation: false
-            runAsNonRoot: true
-            runAsUser: 1000
+          # securityContext:
+          #   readOnlyRootFilesystem: true
+          #   allowPrivilegeEscalation: false
+          #   runAsNonRoot: true
+          #   runAsUser: 1000
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
-      dnsPolicy: ClusterFirst
+      # dnsPolicy: ClusterFirst
       # Optional: Uncomment the following to specify node selectors
       # affinity:
       #   nodeAffinity:
@@ -103,7 +103,7 @@ spec:
       #                 - "true"
       
 
-      securityContext: {}
+      # securityContext: {}
   strategy:
     type: RollingUpdate
     rollingUpdate:
