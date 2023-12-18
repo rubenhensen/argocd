@@ -1,22 +1,17 @@
-# patch_nfs_details.yaml
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
 metadata:
-  labels:
-    app: nfs-client-provisioner
-  name: nfs-client-provisioner
+  name: nfs
+  namespace: kube-system
 spec:
-  template:
-    spec:
-      containers:
-        - name: nfs-client-provisioner
-          env:
-            - name: NFS_SERVER
-              value: 192.168.1.100
-            - name: NFS_PATH
-              value: /volume1/k8s
-      volumes:
-        - name: nfs-client-root
-          nfs:
-            server: 192.168.1.100
-            path: /volume1/k8s
+  chart: nfs-subdir-external-provisioner
+  repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
+  targetNamespace: kube-system
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  set:
+    nfs.server: 192.168.1.99
+    nfs.path: /volume1/k8s
+    storageClass.name: nfs
+    storageClass.defaultClass: true
