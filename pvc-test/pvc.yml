@@ -1,12 +1,10 @@
-apiVersion: "v1"
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: has-influxdb-data
-  namespace: has
+  name: my-pvc
 spec:
-  accessModes:
-    - ReadWriteMany
   storageClassName: nfs-csi
+  accessModes: [ReadWriteOnce]
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi
