@@ -54,6 +54,10 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: mariadb-claim1
+          ports:
+            - containerPort: 3306
+              hostPort: 3306
+              protocol: TCP
       restartPolicy: Always
       terminationGracePeriodSeconds: 5
       volumes:

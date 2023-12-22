@@ -4,7 +4,7 @@ metadata:
   name: mariadb-svc
 spec:
   ports:
-    - name: http
+    - name: "3306"
       port: 3306
       targetPort: 3306
   selector:
