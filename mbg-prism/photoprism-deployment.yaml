@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: photoprism
+        app: mbg-photoprism
     spec:
       containers:
         - env:
