@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: argocd-server
+            name: mbg-photoprism
             port:
               name: http
   # TLS configuration for HTTPS
