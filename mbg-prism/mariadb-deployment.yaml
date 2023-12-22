@@ -20,7 +20,7 @@ spec:
         - name: take-data-dir-ownership
           image: alpine:3
           command:
-          - chown
+          - chown 
           - -R
           - mysql:mysql
           - /var/lib/mysql
