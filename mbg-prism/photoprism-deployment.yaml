@@ -28,7 +28,7 @@ spec:
                   name: mbg-photoprism
                   key: PHOTOPRISM_ADMIN_USER 
             - name: PHOTOPRISM_AUTH_MODE 
-              value: public
+              value: password
             - name: PHOTOPRISM_DATABASE_DRIVER
               value: mysql
             - name: PHOTOPRISM_DATABASE_NAME
