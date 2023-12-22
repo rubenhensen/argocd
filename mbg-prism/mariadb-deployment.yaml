@@ -17,13 +17,16 @@ spec:
         app: mariadb
     spec:
       initContainers:
-      - name: take-data-dir-ownership
-        image: alpine:3
-        command:
-        - chown
-        - -R
-        - mysql:mysql
-        - /var/lib/mysql
+        - name: take-data-dir-ownership
+          image: alpine:3
+          command:
+          - chown
+          - -R
+          - mysql:mysql
+          - /var/lib/mysql
+          volumeMounts:
+            - mountPath: /var/lib/mysql
+              name: mariadb-claim1
       containers:
         - args:
             - --innodb-buffer-pool-size=512M
