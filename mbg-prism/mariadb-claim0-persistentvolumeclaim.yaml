@@ -6,9 +6,8 @@ metadata:
     io.kompose.service: mariadb-claim0
   name: mariadb-claim0
 spec:
-  accessModes:
-    - ReadWriteOnce
+  storageClassName: nfs-csi
+  accessModes: [ReadWriteOnce]
   resources:
     requests:
       storage: 100Mi
-status: {}

@@ -6,8 +6,8 @@ metadata:
     io.kompose.service: photoprism-claim0
   name: photoprism-claim0
 spec:
-  accessModes:
-    - ReadWriteOnce
+  storageClassName: nfs-csi
+  accessModes: [ReadWriteOnce]
   resources:
     requests:
       storage: 200gb
