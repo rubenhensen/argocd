@@ -49,11 +49,11 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/mysql
-              name: mariadb-claim0
+              name: mariadb-claim1
       restartPolicy: Always
       terminationGracePeriodSeconds: 5
       volumes:
-        - name: mariadb-claim0
+        - name: mariadb-claim1
           persistentVolumeClaim:
-            claimName: mariadb-claim0
+            claimName: mariadb-claim1
 status: {}
