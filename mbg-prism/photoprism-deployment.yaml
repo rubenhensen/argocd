@@ -1,10 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  argocd.argoproj.io/sync-wave: "1"
   annotations:
-    kompose.cmd: C:\tools\kompose\kompose.exe convert
-    kompose.version: 1.31.2 (a92241f79)
+    argocd.argoproj.io/sync-wave: "1"
   creationTimestamp: null
   labels:
     io.kompose.service: mbg-photoprism
@@ -18,10 +16,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      annotations:
-        kompose.cmd: C:\tools\kompose\kompose.exe convert
-        kompose.version: 1.31.2 (a92241f79)
-      creationTimestamp: null
       labels:
         io.kompose.network/mbg-prism-default: "true"
         io.kompose.service: photoprism
