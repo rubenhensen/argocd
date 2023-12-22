@@ -2,21 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  labels:
-    io.kompose.service: mbg-photoprism
   name: mbg-photoprism
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: mbg-photoprism
+      app: mbg-photoprism
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.network/mbg-prism-default: "true"
-        io.kompose.service: photoprism
+        app: photoprism
     spec:
       containers:
         - env:

@@ -1,8 +1,6 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    io.kompose.service: mbg-photoprism
   name: mbg-photoprism
 spec:
   ports:
@@ -10,6 +8,6 @@ spec:
       port: 2342
       targetPort: 2342
   selector:
-    io.kompose.service: mbg-photoprism
+    app: mbg-photoprism
 status:
   loadBalancer: {}
