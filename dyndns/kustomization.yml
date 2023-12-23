@@ -4,3 +4,6 @@ configMapGenerator:
 - name: go-transip-dyndns.toml
   files:
   - go-transip-dyndns.toml
+
+resources:
+- dyndns.yaml
