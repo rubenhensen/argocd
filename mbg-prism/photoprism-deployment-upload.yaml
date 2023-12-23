@@ -96,9 +96,9 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /photoprism/originals
-              name: photoprism-claim0
+              name: photoprism-claim2
             - mountPath: /photoprism/storage
-              name: photoprism-claim1
+              name: photoprism-claim3
           workingDir: /photoprism
           readinessProbe:
             httpGet:
@@ -107,10 +107,10 @@ spec:
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
-        - name: photoprism-claim0
+        - name: photoprism-claim2
           persistentVolumeClaim:
-            claimName: photoprism-claim0
-        - name: photoprism-claim1
+            claimName: photoprism-claim2
+        - name: photoprism-claim3
           persistentVolumeClaim:
-            claimName: photoprism-claim1
+            claimName: photoprism-claim3
 status: {}

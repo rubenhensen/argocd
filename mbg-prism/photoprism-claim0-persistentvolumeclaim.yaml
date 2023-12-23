@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
-  name: photoprism-claim0
+  name: photoprism-claim2
 spec:
   storageClassName: nfs-csi
   accessModes: [ReadWriteMany]
