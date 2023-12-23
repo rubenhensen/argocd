@@ -103,10 +103,7 @@ spec:
           readinessProbe:
             httpGet:
               path: /api/v1/status
-              port: http
-              httpHeaders:
-              - name: Accept
-                value: application/json
+              port: 2342
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:

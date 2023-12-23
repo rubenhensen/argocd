@@ -100,10 +100,10 @@ spec:
             - mountPath: /photoprism/storage
               name: photoprism-claim3
           workingDir: /photoprism
-          readinessProbe:
-            httpGet:
-              path: /api/v1/status
-              port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /api/v1/status
+          #     port: http
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
