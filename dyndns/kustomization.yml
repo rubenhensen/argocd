@@ -7,3 +7,4 @@ configMapGenerator:
 
 resources:
 - dyndns.yml
+- transip-key-sealed.yml
