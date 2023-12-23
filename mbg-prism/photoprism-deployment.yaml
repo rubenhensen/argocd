@@ -41,7 +41,7 @@ spec:
             - name: PHOTOPRISM_DATABASE_USER
               value: photoprism
             - name: PHOTOPRISM_DEFAULT_TLS
-              value: "true"
+              value: "false"
             - name: PHOTOPRISM_DETECT_NSFW
               value: "false"
             - name: PHOTOPRISM_DISABLE_CHOWN
@@ -57,7 +57,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_TENSORFLOW
               value: "false"
             - name: PHOTOPRISM_DISABLE_TLS
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_VECTORS
               value: "false"
             - name: PHOTOPRISM_DISABLE_WEBDAV
