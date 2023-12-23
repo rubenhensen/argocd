@@ -35,3 +35,6 @@ spec:
     - secretName:  letsencrypt-production.key
       hosts:
         - mbgupload.hensen.io
+    - secretName:  letsencrypt-production.key
+      hosts:
+        - mbg.hensen.io
