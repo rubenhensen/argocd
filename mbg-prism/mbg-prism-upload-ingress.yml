@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism-upload-ingress
+            name: mbg-photoprism-upload-svc
             port:
               name: http
   # TLS configuration for HTTPS

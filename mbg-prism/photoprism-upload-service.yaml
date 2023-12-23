@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mbg-photoprism-upload
+  name: mbg-photoprism-upload-svc
 spec:
   ports:
     - name: http
