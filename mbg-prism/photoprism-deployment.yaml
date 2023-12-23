@@ -47,7 +47,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_CHOWN
               value: "true"
             - name: PHOTOPRISM_DISABLE_CLASSIFICATION
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_FACES
               value: "false"
             - name: PHOTOPRISM_DISABLE_RAW
@@ -55,13 +55,13 @@ spec:
             - name: PHOTOPRISM_DISABLE_SETTINGS
               value: "true"
             - name: PHOTOPRISM_DISABLE_TENSORFLOW
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_TLS
               value: "true"
             - name: PHOTOPRISM_DISABLE_VECTORS
               value: "false"
             - name: PHOTOPRISM_DISABLE_WEBDAV
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_EXPERIMENTAL
               value: "false"
             - name: PHOTOPRISM_HTTP_COMPRESSION
@@ -71,7 +71,7 @@ spec:
             - name: PHOTOPRISM_LOG_LEVEL
               value: info
             - name: PHOTOPRISM_ORIGINALS_LIMIT
-              value: "5000"
+              value: "500000"
             - name: PHOTOPRISM_RAW_PRESETS
               value: "false"
             - name: PHOTOPRISM_READONLY

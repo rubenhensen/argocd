@@ -71,7 +71,7 @@ spec:
             - name: PHOTOPRISM_LOG_LEVEL
               value: info
             - name: PHOTOPRISM_ORIGINALS_LIMIT
-              value: "5000"
+              value: "500000"
             - name: PHOTOPRISM_RAW_PRESETS
               value: "false"
             - name: PHOTOPRISM_READONLY
