@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-server-ingress
+  name: mbg-photoprism-upload-ingress
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
     # Use Traefik as the Ingress controller
@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism
+            name: mbg-photoprism-upload-ingress
             port:
               name: http
   # TLS configuration for HTTPS
