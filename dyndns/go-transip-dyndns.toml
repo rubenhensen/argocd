@@ -126,7 +126,7 @@ hostname = "hensen.io"
 entry = "argocd"
 ttl = 86400
 type = "CNAME"
-content = "cname.vercel-dns.com."
+content = "@"
 
 [[record]]
 hostname = "hensen.io"
