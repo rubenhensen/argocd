@@ -6,4 +6,4 @@ configMapGenerator:
   - go-transip-dyndns.toml
 
 resources:
-- dyndns.yaml
+- dyndns.yml
