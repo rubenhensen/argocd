@@ -45,7 +45,7 @@ spec:
             - name: PHOTOPRISM_DETECT_NSFW
               value: "false"
             - name: PHOTOPRISM_DISABLE_CHOWN
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_CLASSIFICATION
               value: "false"
             - name: PHOTOPRISM_DISABLE_FACES
@@ -53,7 +53,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_RAW
               value: "false"
             - name: PHOTOPRISM_DISABLE_SETTINGS
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_TENSORFLOW
               value: "false"
             - name: PHOTOPRISM_DISABLE_TLS
@@ -61,9 +61,9 @@ spec:
             - name: PHOTOPRISM_DISABLE_VECTORS
               value: "false"
             - name: PHOTOPRISM_DISABLE_WEBDAV
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_EXPERIMENTAL
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_HTTP_COMPRESSION
               value: gzip
             - name: PHOTOPRISM_JPEG_QUALITY
@@ -75,15 +75,17 @@ spec:
             - name: PHOTOPRISM_RAW_PRESETS
               value: "false"
             - name: PHOTOPRISM_READONLY
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_SITE_AUTHOR
+              value: Scouting MBG
             - name: PHOTOPRISM_SITE_CAPTION
-              value: AI-Powered Photos App
+              value: Alle foto's van Scouting MBG
             - name: PHOTOPRISM_SITE_DESCRIPTION
+              value: Alle foto's van Scouting MBG
             - name: PHOTOPRISM_SITE_URL
               value: http://localhost:2342/
             - name: PHOTOPRISM_UPLOAD_NSFW
-              value: "true"
+              value: "false"
           image: photoprism/photoprism:latest
           name: mbg-photoprism-upload
           ports:
@@ -95,6 +97,7 @@ spec:
           volumeMounts:
             - mountPath: /photoprism/originals
               name: photoprism-claim2
+              readOnly: true
             - mountPath: /photoprism/storage
               name: photoprism-claim3
           workingDir: /photoprism
