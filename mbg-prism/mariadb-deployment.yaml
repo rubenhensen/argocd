@@ -53,7 +53,7 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /var/lib/mysql
-              name: mariadb-claim1
+              name: mariadb-claim2
           ports:
             - containerPort: 3306
               hostPort: 3306
@@ -61,7 +61,7 @@ spec:
       restartPolicy: Always
       terminationGracePeriodSeconds: 5
       volumes:
-        - name: mariadb-claim1
+        - name: mariadb-claim2
           persistentVolumeClaim:
-            claimName: mariadb-claim1
+            claimName: mariadb-claim2
 status: {}

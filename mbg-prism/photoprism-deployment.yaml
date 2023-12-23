@@ -83,7 +83,7 @@ spec:
             - name: PHOTOPRISM_SITE_DESCRIPTION
               value: Foto's scouting MBG
             - name: PHOTOPRISM_SITE_URL
-              value: http://localhost:2342/
+              value: https://mbg.hensen.io
             - name: PHOTOPRISM_UPLOAD_NSFW
               value: "false"
           image: photoprism/photoprism:latest

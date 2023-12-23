@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mariadb-claim1
+  name: mariadb-claim2
 spec:
   storageClassName: nfs-csi
   accessModes: [ReadWriteOnce]
