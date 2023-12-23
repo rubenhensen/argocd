@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: mbg.hensen.io
+  - host: mbgupload.hensen.io
     http:
       paths:
       - path: /
@@ -24,4 +24,4 @@ spec:
     # TLS secretName used on ClusterIssuer
     - secretName:  letsencrypt-production.key
       hosts:
-        - mbg.hensen.io
+        - mbgupload.hensen.io
