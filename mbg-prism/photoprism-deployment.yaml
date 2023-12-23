@@ -19,12 +19,12 @@ spec:
               valueFrom: 
                 secretKeyRef: 
                   name: mbg-photoprism
-                  key: PHOTOPRISM_ADMIN_PASSWORD 
+                  key: PHOTOPRISM_ADMIN_PASSWORD_READONLY
             - name: PHOTOPRISM_ADMIN_USER 
               valueFrom: 
                 secretKeyRef: 
                   name: mbg-photoprism
-                  key: PHOTOPRISM_ADMIN_USER 
+                  key: PHOTOPRISM_ADMIN_USER_READONLY
             - name: PHOTOPRISM_AUTH_MODE 
               value: password
             - name: PHOTOPRISM_DATABASE_DRIVER
@@ -35,7 +35,7 @@ spec:
               valueFrom: 
                 secretKeyRef: 
                   name: mbg-photoprism
-                  key: MARIADB_PASSWORD 
+                  key: MARIADB_PASSWORD_READONLY 
             - name: PHOTOPRISM_DATABASE_SERVER
               value: mariadb:3306
             - name: PHOTOPRISM_DATABASE_USER
