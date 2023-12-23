@@ -1,0 +1,116 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  creationTimestamp: null
+  name: mbg-photoprism-upload
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mbg-photoprism-upload
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mbg-photoprism-upload
+    spec:
+      containers:
+        - env:
+            - name: PHOTOPRISM_ADMIN_PASSWORD 
+              valueFrom: 
+                secretKeyRef: 
+                  name: mbg-photoprism-upload
+                  key: PHOTOPRISM_ADMIN_PASSWORD 
+            - name: PHOTOPRISM_ADMIN_USER 
+              valueFrom: 
+                secretKeyRef: 
+                  name: mbg-photoprism-upload
+                  key: PHOTOPRISM_ADMIN_USER 
+            - name: PHOTOPRISM_AUTH_MODE 
+              value: password
+            - name: PHOTOPRISM_DATABASE_DRIVER
+              value: mysql
+            - name: PHOTOPRISM_DATABASE_NAME
+              value: photoprism
+            - name: PHOTOPRISM_DATABASE_PASSWORD 
+              valueFrom: 
+                secretKeyRef: 
+                  name: mbg-photoprism-upload
+                  key: MARIADB_PASSWORD 
+            - name: PHOTOPRISM_DATABASE_SERVER
+              value: mariadb:3306
+            - name: PHOTOPRISM_DATABASE_USER
+              value: photoprism
+            - name: PHOTOPRISM_DEFAULT_TLS
+              value: "true"
+            - name: PHOTOPRISM_DETECT_NSFW
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_CHOWN
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_CLASSIFICATION
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_FACES
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_RAW
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_SETTINGS
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_TENSORFLOW
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_TLS
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_VECTORS
+              value: "false"
+            - name: PHOTOPRISM_DISABLE_WEBDAV
+              value: "false"
+            - name: PHOTOPRISM_EXPERIMENTAL
+              value: "false"
+            - name: PHOTOPRISM_HTTP_COMPRESSION
+              value: gzip
+            - name: PHOTOPRISM_JPEG_QUALITY
+              value: "85"
+            - name: PHOTOPRISM_LOG_LEVEL
+              value: info
+            - name: PHOTOPRISM_ORIGINALS_LIMIT
+              value: "5000"
+            - name: PHOTOPRISM_RAW_PRESETS
+              value: "false"
+            - name: PHOTOPRISM_READONLY
+              value: "false"
+            - name: PHOTOPRISM_SITE_AUTHOR
+            - name: PHOTOPRISM_SITE_CAPTION
+              value: AI-Powered Photos App
+            - name: PHOTOPRISM_SITE_DESCRIPTION
+            - name: PHOTOPRISM_SITE_URL
+              value: http://localhost:2342/
+            - name: PHOTOPRISM_UPLOAD_NSFW
+              value: "true"
+          image: photoprism/photoprism:latest
+          name: mbg-photoprism-upload
+          ports:
+            - containerPort: 2342
+              hostPort: 2342
+              protocol: TCP
+              name: http
+          resources: {}
+          volumeMounts:
+            - mountPath: /photoprism/originals
+              name: photoprism-claim0
+            - mountPath: /photoprism/storage
+              name: photoprism-claim1
+          workingDir: /photoprism
+          readinessProbe:
+            httpGet:
+              path: /api/v1/status
+              port: http
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 10
+      volumes:
+        - name: photoprism-claim0
+          persistentVolumeClaim:
+            claimName: photoprism-claim0
+        - name: photoprism-claim1
+          persistentVolumeClaim:
+            claimName: photoprism-claim1
+status: {}
