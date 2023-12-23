@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   creationTimestamp: null
   name: mbg-photoprism
@@ -92,6 +92,7 @@ spec:
             - containerPort: 2342
               hostPort: 2342
               protocol: TCP
+              name: http
           resources: {}
           volumeMounts:
             - mountPath: /photoprism/originals
@@ -99,6 +100,10 @@ spec:
             - mountPath: /photoprism/storage
               name: photoprism-claim1
           workingDir: /photoprism
+          readinessProbe:
+            httpGet:
+              path: /api/v1/status
+              port: http
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:

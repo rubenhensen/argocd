@@ -9,14 +9,14 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: mbg.hensen.io
+  - host: mbgupload.hensen.io
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism
+            name: mbg-photoprism-upload
             port:
               name: http
   # TLS configuration for HTTPS
@@ -24,4 +24,4 @@ spec:
     # TLS secretName used on ClusterIssuer
     - secretName:  letsencrypt-production.key
       hosts:
-        - mbg.hensen.io
+        - mbgupload.hensen.io

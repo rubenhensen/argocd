@@ -5,7 +5,7 @@ metadata:
   name: photoprism-claim1
 spec:
   storageClassName: nfs-csi
-  accessModes: [ReadWriteOnce]
+  accessModes: [ReadWriteMany]
   resources:
     requests:
       storage: 10Gi
