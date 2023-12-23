@@ -8,8 +8,6 @@ spec:
   selector:
     matchLabels:
       app: mbg-photoprism
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
