@@ -107,8 +107,6 @@ spec:
               httpHeaders:
               - name: Accept
                 value: application/json
-              - name: Host
-                value: 127.0.0.1:2342
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
