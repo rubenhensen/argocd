@@ -16,7 +16,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism-svc2
+            name: mbg-photoprism-svc
             port:
               name: http
   - host: mbgupload.hensen.io
@@ -36,7 +36,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism-svc2
+            name: mbg-photoprism-svc
             port:
               name: http
   - host: fotoupload.scoutingmbg.nl
