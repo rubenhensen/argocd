@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   creationTimestamp: null
-  name: mbg-photoprism
+  name: mbg-photoprism2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mbg-photoprism
+      app: mbg-photoprism2
   template:
     metadata:
       labels:
-        app: mbg-photoprism
+        app: mbg-photoprism2
     spec:
       containers:
         - env:

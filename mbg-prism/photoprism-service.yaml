@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mbg-photoprism-svc
+  name: mbg-photoprism-svc2
 spec:
   ports:
     - name: http
       port: 2342
       targetPort: 2342
   selector:
-    app: mbg-photoprism
+    app: mbg-photoprism2
 status:
   loadBalancer: {}
