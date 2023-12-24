@@ -40,12 +40,12 @@ spec:
               valueFrom: 
                 secretKeyRef: 
                   name: mbg-photoprism
-                  key: MARIADB_PASSWORD 
+                  key: MARIADB_PASSWORD_READONLY
             - name: MARIADB_ROOT_PASSWORD 
               valueFrom: 
                 secretKeyRef: 
                   name: mbg-photoprism
-                  key: MARIADB_ROOT_PASSWORD 
+                  key: MARIADB_ROOT_PASSWORD_READONLY
             - name: MARIADB_USER
               value: photoprism
           image: mariadb:11
