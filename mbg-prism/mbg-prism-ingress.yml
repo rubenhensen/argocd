@@ -56,3 +56,4 @@ spec:
       hosts:
         - mbgupload.hensen.io
         - mbg.hensen.io
+        - foto.scoutingmbg.nl
