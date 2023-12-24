@@ -52,7 +52,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_RAW
               value: "false"
             - name: PHOTOPRISM_DISABLE_SETTINGS
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_TENSORFLOW
               value: "false"
             - name: PHOTOPRISM_DISABLE_TLS
@@ -74,7 +74,7 @@ spec:
             - name: PHOTOPRISM_RAW_PRESETS
               value: "false"
             - name: PHOTOPRISM_READONLY
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_SITE_AUTHOR
               value: Scouting MBG
             - name: PHOTOPRISM_SITE_CAPTION
@@ -109,6 +109,7 @@ spec:
         - name: photoprism-claim2
           persistentVolumeClaim:
             claimName: photoprism-claim2
+          readOnly: true
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
