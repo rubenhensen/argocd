@@ -29,6 +29,26 @@ spec:
             name: mbg-photoprism-upload-svc
             port:
               name: http
+  - host: foto.scoutingmbg.nl
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mbg-photoprism-svc
+            port:
+              name: http
+  - host: fotoupload.scoutingmbg.nl
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mbg-photoprism-upload-svc
+            port:
+              name: http
   # TLS configuration for HTTPS
   tls:
     # TLS secretName used on ClusterIssuer
