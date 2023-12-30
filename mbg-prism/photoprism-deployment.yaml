@@ -116,7 +116,7 @@ spec:
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
-        - name: import
-          persistentVolumeClaim:
-          claimName: photoprism-claim4
+        - name: photoprism-claim4
+          persistentVolumeClaim: 
+            claimName: photoprism-claim4
 status: {}

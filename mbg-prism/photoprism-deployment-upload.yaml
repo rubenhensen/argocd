@@ -98,6 +98,8 @@ spec:
               name: photoprism-claim2
             - mountPath: /photoprism/storage
               name: photoprism-claim3
+            - mountPath: /photoprism/import
+              name: photoprism-claim4
           workingDir: /photoprism
           # readinessProbe:
           #   httpGet:
@@ -112,4 +114,7 @@ spec:
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
+        - name: photoprism-claim4
+          persistentVolumeClaim: 
+            claimName: photoprism-claim4
 status: {}
