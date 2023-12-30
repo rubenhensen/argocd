@@ -60,7 +60,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_VECTORS
               value: "false"
             - name: PHOTOPRISM_DISABLE_WEBDAV
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_EXPERIMENTAL
               value: "false"
             - name: PHOTOPRISM_HTTP_COMPRESSION
@@ -98,6 +98,9 @@ spec:
               name: photoprism-claim2
             - mountPath: /photoprism/storage
               name: photoprism-claim3
+            - mountPath: /photoprism/import
+              name: photoprism-claim4
+            
           workingDir: /photoprism
           # readinessProbe:
           #   httpGet:
@@ -113,4 +116,7 @@ spec:
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
+        - name: import
+          persistentVolumeClaim:
+          claimName: photoprism-claim4
 status: {}
