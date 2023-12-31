@@ -1,0 +1,19 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroutetls
+  namespace: default
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`mbgupload.hensen.io`)
+    kind: Rule
+    services:
+    - name: mbg-photoprism-upload-svc
+      port: 
+        name: http
+  tls:
+    certResolver: letsencrypt-production.key
+    hosts: 
+      - mbgupload.hensen.io
