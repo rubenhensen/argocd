@@ -11,8 +11,7 @@ spec:
     kind: Rule
     services:
     - name: mbg-photoprism-upload-svc
-      port: 
-        name: http
+      port: 2342
   tls:
     certResolver: letsencrypt-production.key
     hosts: 
