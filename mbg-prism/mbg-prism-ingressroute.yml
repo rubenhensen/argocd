@@ -13,6 +13,6 @@ spec:
     - name: mbg-photoprism-upload-svc
       port: 2342
   tls:
-    certResolver: letsencrypt-production.key
+    secretName: letsencrypt-production.key
     hosts: 
       - mbgupload.hensen.io
