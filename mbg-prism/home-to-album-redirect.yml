@@ -4,5 +4,5 @@ metadata:
   name: home-to-album-redirectregex
 spec:
   redirectRegex:
-    regex: ^https?:\/\/foto.scoutingmbg.nl\/?
+    regex: ^(https://|http://)?foto.scoutingmbg.nl/?$
     replacement: https://foto.scoutingmbg.nl/library/albums
