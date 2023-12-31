@@ -19,16 +19,16 @@ spec:
             name: mbg-photoprism-svc
             port:
               name: http
-  # - host: mbgupload.hensen.io
-  #   http:
-  #     paths:
-  #     - path: /
-  #       pathType: Prefix
-  #       backend:
-  #         service:
-  #           name: mbg-photoprism-upload-svc
-  #           port:
-  #             name: http
+  - host: mbgupload.hensen.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mbg-photoprism-upload-svc
+            port:
+              name: http
   - host: foto.scoutingmbg.nl
     http:
       paths:
@@ -54,6 +54,6 @@ spec:
     # TLS secretName used on ClusterIssuer
     - secretName:  letsencrypt-production.key
       hosts:
-        # - mbgupload.hensen.io
+        - mbgupload.hensen.io
         - mbg.hensen.io
         - foto.scoutingmbg.nl
