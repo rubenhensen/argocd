@@ -34,33 +34,33 @@ spec:
               containerPort: 2368
               protocol: TCP
         
-          # readinessProbe:
-          #   initialDelaySeconds: 30
-          #   periodSeconds: 30
-          #   timeoutSeconds: 3
-          #   successThreshold: 1
-          #   failureThreshold: 6
-          #   httpGet:
-          #     path: /ghost/api/v4/admin/site/
-          #     port: ghk3s
-          #     httpHeaders:
-          #     - name: X-Forwarded-Proto
-          #       value: https
-          #     - name: Host
-          #       value: blog.hensen.io
-          # livenessProbe:                        
-          #   httpGet:
-          #     path: /ghost/api/v4/admin/site/
-          #     port: ghk3s
-          #     httpHeaders:
-          #     - name: X-Forwarded-Proto
-          #       value: https
-          #     - name: Host
-          #       value: blog.hensen.io
-          #   periodSeconds: 3600
-          #   timeoutSeconds: 3
-          #   successThreshold: 1
-          #   failureThreshold: 2
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 6
+            httpGet:
+              path: /ghost/api/v4/admin/site/
+              port: ghk3s
+              httpHeaders:
+              - name: X-Forwarded-Proto
+                value: https
+              - name: Host
+                value: blog.hensen.io
+          livenessProbe:                        
+            httpGet:
+              path: /ghost/api/v4/admin/site/
+              port: ghk3s
+              httpHeaders:
+              - name: X-Forwarded-Proto
+                value: https
+              - name: Host
+                value: blog.hensen.io
+            periodSeconds: 3600
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 2
           env:
             - name: NODE_ENV
               value: production
@@ -87,6 +87,8 @@ spec:
             allowPrivilegeEscalation: false
             runAsNonRoot: true
             runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
