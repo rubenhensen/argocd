@@ -86,9 +86,9 @@ spec:
             # readOnlyRootFilesystem: true
             # allowPrivilegeEscalation: false
             # runAsNonRoot: true
-            runAsUser: 1000
-            runAsGroup: 1000
-            fsGroup: 1000
+            runAsUser: 0
+            runAsGroup: 0
+            fsGroup: 0
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
