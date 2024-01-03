@@ -104,7 +104,7 @@ spec:
       #                 - "true"
       
 
-      # securityContext: {}
+      securityContext: {}
   strategy:
     type: RollingUpdate
     rollingUpdate:
