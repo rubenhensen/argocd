@@ -130,6 +130,13 @@ content = "@"
 
 [[record]]
 hostname = "hensen.io"
+entry = "blog"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
 entry = "mail"
 ttl = 86400
 type = "CNAME"
