@@ -17,8 +17,8 @@ spec:
       volumes:
         - name: ghostk3s-static-ghost
           persistentVolumeClaim:
-            claimName: ghostk3s-static-ghost2
-            defaultMode: 511
+            claimName: ghostk3s-static-ghost3
+            # defaultMode: 511
         - name: ghost-config-prod
           secret:
             secretName: ghost-config-prod
@@ -83,11 +83,11 @@ spec:
               mountPath: /tmp
               readOnly: false
           imagePullPolicy: Always
-          # securityContext:
-            # readOnlyRootFilesystem: true
-            # allowPrivilegeEscalation: false
-            # runAsNonRoot: true
-            # runAsUser: 0
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            runAsUser: 1000
             # runAsGroup: 0
             # fsGroup: 0
       restartPolicy: Always

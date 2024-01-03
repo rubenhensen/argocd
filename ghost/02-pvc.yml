@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ghostk3s-static-ghost2
+  name: ghostk3s-static-ghost3
   namespace: ghostk3s
   labels:
     app: ghostk3s
 spec:
   storageClassName: nfs-csi # Change this to your storageClassName
-  volumeMode: Filesystem
+  # volumeMode: Filesystem
   accessModes:
     - ReadWriteMany # Change this to your accessModes
   resources:
