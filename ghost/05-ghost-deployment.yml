@@ -18,7 +18,7 @@ spec:
         - name: ghostk3s-static-ghost
           persistentVolumeClaim:
             claimName: ghostk3s-static-ghost3
-        - name: ghost-config-prod
+        - name: ghost-config-prod2
           secret:
             secretName: ghost-config-prod2
             defaultMode: 420
