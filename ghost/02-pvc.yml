@@ -3,11 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: ghostk3s-static-ghost
   namespace: ghostk3s
-  argocd.argoproj.io/sync-wave: "2"
   labels:
     app: ghostk3s
 spec:
-  storageClassName: nfs # Change this to your storageClassName
+  storageClassName: nfs-csi # Change this to your storageClassName
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany # Change this to your accessModes
@@ -23,7 +22,7 @@ metadata:
   labels:
     app: mysql-ghostk3s
 spec:
-  storageClassName: nfs # Change this to your storageClassName
+  storageClassName: nfs-csi # Change this to your storageClassName
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany # Change this to your accessModes

@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: ghostk3s
   namespace: ghostk3s
-  argocd.argoproj.io/sync-wave: "3"
   labels:
     app: ghostk3s
 spec:

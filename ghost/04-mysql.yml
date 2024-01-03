@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: mysql-ghostk3s
   namespace: ghostk3s
-  argocd.argoproj.io/sync-wave: "4"
   labels:
     app: mysql-ghostk3s
 spec:
@@ -34,18 +33,18 @@ spec:
             # privileged: false
             # readOnlyRootFilesystem: false # Todo: Unprivileged mysql container
             # runAsNonRoot: true
-          image: docker.io/mysql:8.2
+          image: mysql:8.2
           imagePullPolicy: IfNotPresent
           envFrom:
             - secretRef:
                 name: mysql-ghostk3s
-          resources:
-            requests:
-              memory: 16Mi
-              cpu: "0"
-            limits:
-              memory: 1Gi
-              cpu: 800m
+          # resources:
+          #   requests:
+          #     memory: 16Mi
+          #     cpu: "0"
+          #   limits:
+          #     memory: 1Gi
+          #     cpu: 800m
           ports:
             - containerPort: 3306
               protocol: TCP

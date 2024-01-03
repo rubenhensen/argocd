@@ -5,7 +5,6 @@ metadata:
   namespace: ghostk3s
   kubernetes.io/ingress.class: traefik
   cert-manager.io/cluster-issuer: letsencrypt-production
-  argocd.argoproj.io/sync-wave: "3"
 spec:
   ingressClassName: traefik # or nginx, caddy, etc
   tls:

@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: ghostk3s
   namespace: ghostk3s
-  # argocd.argoproj.io/sync-wave: "5"
 spec:
   replicas: 1
   selector:
