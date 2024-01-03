@@ -14,10 +14,10 @@ spec:
       labels:
         app: ghostk3s
     spec:
-      # volumes:
-      #   - name: ghostk3s-static-ghost
-      #     persistentVolumeClaim:
-      #       claimName: ghostk3s-static-ghost
+      volumes:
+        - name: ghostk3s-static-ghost
+          persistentVolumeClaim:
+            claimName: ghostk3s-static-ghost2
       #   - name: ghost-config-prod
       #     secret:
       #       secretName: ghost-config-prod
@@ -71,16 +71,16 @@ spec:
           #   requests:
           #     cpu: '0'
           #     memory: 16Mi
-          # volumeMounts:
-          #   - name: ghostk3s-static-ghost
-          #     mountPath: /var/lib/ghost/content
-            # - name: ghost-config-prod
-            #   readOnly: true
-            #   mountPath: /var/lib/ghost/config.production.json
-            #   subPath: config.production.json
-            # - name: tmp
-            #   mountPath: /tmp
-            #   readOnly: false
+          volumeMounts:
+            - name: ghostk3s-static-ghost
+              mountPath: /var/lib/ghost/content
+            - name: ghost-config-prod
+              readOnly: true
+              mountPath: /var/lib/ghost/config.production.json
+              subPath: config.production.json
+            - name: tmp
+              mountPath: /tmp
+              readOnly: false
           # imagePullPolicy: Always
           # securityContext:
           #   readOnlyRootFilesystem: true

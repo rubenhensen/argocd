@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ghostk3s-static-ghost
+  name: ghostk3s-static-ghost2
   namespace: ghostk3s
   labels:
     app: ghostk3s
@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mysql-ghostk3s
+  name: mysql-ghostk3s2
   namespace: ghostk3s
   labels:
     app: mysql-ghostk3s
