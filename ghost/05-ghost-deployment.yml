@@ -20,7 +20,7 @@ spec:
             claimName: ghostk3s-static-ghost3
         - name: ghost-config-prod
           secret:
-            secretName: ghost-config-prod
+            secretName: ghost-config-prod2
             defaultMode: 420
         - name: tmp
           emptyDir:
