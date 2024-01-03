@@ -18,13 +18,13 @@ spec:
         - name: ghostk3s-static-ghost
           persistentVolumeClaim:
             claimName: ghostk3s-static-ghost2
-      #   - name: ghost-config-prod
-      #     secret:
-      #       secretName: ghost-config-prod
-      #       defaultMode: 420
-      #   - name: tmp
-      #     emptyDir:
-      #       sizeLimit: 128Mi
+        - name: ghost-config-prod
+          secret:
+            secretName: ghost-config-prod
+            defaultMode: 420
+        - name: tmp
+          emptyDir:
+            sizeLimit: 128Mi
 
       containers:
         - name: ghostk3s
