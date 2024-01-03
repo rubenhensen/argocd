@@ -18,6 +18,7 @@ spec:
         - name: ghostk3s-static-ghost
           persistentVolumeClaim:
             claimName: ghostk3s-static-ghost2
+            defaultMode: 511
         - name: ghost-config-prod
           secret:
             secretName: ghost-config-prod
@@ -82,13 +83,13 @@ spec:
               mountPath: /tmp
               readOnly: false
           imagePullPolicy: Always
-          securityContext:
+          # securityContext:
             # readOnlyRootFilesystem: true
             # allowPrivilegeEscalation: false
             # runAsNonRoot: true
-            runAsUser: 0
-            runAsGroup: 0
-            fsGroup: 0
+            # runAsUser: 0
+            # runAsGroup: 0
+            # fsGroup: 0
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
@@ -104,7 +105,7 @@ spec:
       #                 - "true"
       
 
-      securityContext: {}
+      # securityContext: {}
   strategy:
     type: RollingUpdate
     rollingUpdate:
