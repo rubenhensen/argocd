@@ -22,7 +22,7 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: ghostk3s-svc
+                name: ghostk3s
                 port:
                   name: ghk3s
   # Optional:
