@@ -84,9 +84,9 @@ spec:
           imagePullPolicy: Always
           securityContext:
             readOnlyRootFilesystem: true
-            allowPrivilegeEscalation: true
-            runAsNonRoot: false
-            # runAsUser: 1000
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            runAsUser: 1000
             # runAsGroup: 0
             # fsGroup: 0
       restartPolicy: Always
