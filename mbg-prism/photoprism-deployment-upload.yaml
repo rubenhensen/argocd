@@ -94,8 +94,8 @@ spec:
               name: http
           resources:
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: "500Mi"
+              cpu: "1000m"
           volumeMounts:
             - mountPath: /photoprism/originals
               name: photoprism-claim2
