@@ -13,6 +13,10 @@ spec:
         app: mbg-photoprism-upload
     spec:
       containers:
+        - resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
         - env:
             - name: PHOTOPRISM_ADMIN_PASSWORD 
               valueFrom: 
