@@ -13,10 +13,6 @@ spec:
         app: mbg-photoprism-upload
     spec:
       containers:
-        - resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
         - env:
             - name: PHOTOPRISM_ADMIN_PASSWORD 
               valueFrom: 
@@ -96,7 +92,10 @@ spec:
               hostPort: 2342
               protocol: TCP
               name: http
-          resources: {}
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
           volumeMounts:
             - mountPath: /photoprism/originals
               name: photoprism-claim2
