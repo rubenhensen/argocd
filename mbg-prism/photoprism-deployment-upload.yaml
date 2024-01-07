@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  creationTimestamp: null
   name: mbg-photoprism-upload
 spec:
   selector:
     matchLabels:
       app: mbg-photoprism-upload
+  serviceName: "mbg-photoprism-upload-svc"
   template:
     metadata:
       labels:
@@ -120,4 +120,3 @@ spec:
         - name: photoprism-claim4
           persistentVolumeClaim: 
             claimName: photoprism-claim4
-status: {}

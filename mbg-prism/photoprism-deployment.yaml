@@ -1,17 +1,18 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  creationTimestamp: null
   name: mbg-photoprism
 spec:
   selector:
     matchLabels:
       app: mbg-photoprism
+  serviceName: "mbg-photoprism-svc"
   template:
     metadata:
       labels:
         app: mbg-photoprism
     spec:
+      
       containers:
         - env:
             - name: PHOTOPRISM_ADMIN_PASSWORD 
@@ -112,11 +113,10 @@ spec:
         - name: photoprism-claim2
           persistentVolumeClaim:
             claimName: photoprism-claim2
-          readOnly: true
+            readOnly: true
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
         - name: photoprism-claim4
           persistentVolumeClaim: 
             claimName: photoprism-claim4
-status: {}
