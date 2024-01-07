@@ -5,3 +5,4 @@ ghost/config.production.json
 docker-compose.yml
 mbg-prism/mbg-secrets.yml
 mbg-prism/mbg-secrets-upload.yml
+tempdelete
