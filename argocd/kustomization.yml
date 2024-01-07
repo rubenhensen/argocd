@@ -10,6 +10,6 @@ patches:
       name: argocd-cmd-params-cm
     patch: |-
       - op: replace
-        path: /data/server.insecure
+        path: /server.insecure
         value: true
 
