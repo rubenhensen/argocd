@@ -5,11 +5,4 @@ resources:
 ## changes to config maps
 namespace: argocd
 patches:
-  - target:
-      kind: ConfigMap
-      name: argocd-cmd-params-cm
-    patch: |-
-      - op: replace
-        path: /server.insecure
-        value: true
-
+- path: overlays/argo-cmd-param-cm.yaml
