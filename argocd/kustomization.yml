@@ -5,4 +5,4 @@ resources:
 ## changes to config maps
 namespace: argocd
 patches:
-- path: overlays/argo-cmd-param-cm.yaml
+- path: overlays/argo-cmd-param-cm.yml
