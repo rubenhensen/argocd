@@ -21,10 +21,10 @@ spec:
           volumeMounts:
             - name: secret-vol
               mountPath: /secret
-              read-only: true
+              readOnly: true
             - name: config-vol
               mountPath: /config
-              read-only: true
+              readOnly: true
           lifecycle:
             postStart:
               exec:
