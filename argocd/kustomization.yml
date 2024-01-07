@@ -11,5 +11,5 @@ patches:
     patch: |-
       - op: replace
         path: /data/server.insecure
-        value: "true"
+        value: true
 
