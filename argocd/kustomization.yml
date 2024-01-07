@@ -5,11 +5,11 @@ resources:
 ## changes to config maps
 namespace: argocd
 patches:
-- patch: |-
-    apiVersion: v1
-    kind: ConfigMap
-    metadata:
-      namespace: argocd
+  - target:
+      kind: ConfigMap
       name: argocd-cmd-params-cm
-    data:
-      server.insecure: "true" 
+    patch: |-
+      - op: replace
+        path: /data/server.insecure
+        value: "true"
+
