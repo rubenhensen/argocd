@@ -93,7 +93,6 @@ spec:
               hostPort: 2342
               protocol: TCP
               name: http
-          resources: {}
           volumeMounts:
             - mountPath: /photoprism/originals
               name: photoprism-claim2
@@ -103,10 +102,20 @@ spec:
               name: photoprism-claim4
             
           workingDir: /photoprism
-          # readinessProbe:
-          #   httpGet:
-          #     path: /api/v1/status
-          #     port: 2342
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 6
+            httpGet:
+              path: /api/v1/status
+              port: http
+              httpHeaders:
+              - name: X-Forwarded-Proto
+                value: https
+              - name: Host
+                value: mbg.hensen.io
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
