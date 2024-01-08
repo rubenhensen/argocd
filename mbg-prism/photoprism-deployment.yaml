@@ -86,6 +86,8 @@ spec:
               value: https://foto.scoutingmbg.nl
             - name: PHOTOPRISM_UPLOAD_NSFW
               value: "true"
+            - name: PHOTOPRISM_WORKERS
+              value: "2"
           image: photoprism/photoprism:latest
           name: mbg-photoprism-upload
           ports:
