@@ -97,6 +97,9 @@ spec:
             limits:
               memory: "3000Mi"
               cpu: "2000m"
+            requests:
+              memory: "128Mi"
+              cpu: "0"
           volumeMounts:
             - mountPath: /photoprism/originals
               name: photoprism-claim2
