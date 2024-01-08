@@ -95,7 +95,7 @@ spec:
               name: http
           resources:
             limits:
-              memory: "1000Mi"
+              memory: "3000Mi"
               cpu: "2000m"
           volumeMounts:
             - mountPath: /photoprism/originals
