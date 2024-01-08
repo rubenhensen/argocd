@@ -4,5 +4,5 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ## changes to config maps
 namespace: argocd
-patches:
-- path: overlays/argo-cmd-param-cm.yml
+patchesStrategicMerge: # deprecated, but patches replacement does not work for some reason
+- overlays/argo-cmd-param-cm.yml
