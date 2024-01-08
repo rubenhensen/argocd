@@ -68,7 +68,7 @@ spec:
             - name: PHOTOPRISM_JPEG_QUALITY
               value: "85"
             - name: PHOTOPRISM_LOG_LEVEL
-              value: info
+              value: debug
             - name: PHOTOPRISM_ORIGINALS_LIMIT
               value: "500000"
             - name: PHOTOPRISM_RAW_PRESETS
@@ -104,10 +104,21 @@ spec:
             - mountPath: /photoprism/import
               name: photoprism-claim4
           workingDir: /photoprism
-          # readinessProbe:
-          #   httpGet:
-          #     path: /api/v1/status
-          #     port: 2342
+
+          readinessProbe:
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 6
+            httpGet:
+              path: /api/v1/status
+              port: http
+              httpHeaders:
+              - name: X-Forwarded-Proto
+                value: https
+              - name: Host
+                value: mbgupload.hensen.io
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
