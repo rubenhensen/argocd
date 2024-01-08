@@ -12,7 +12,7 @@ spec:
       labels:
         app: mbg-photoprism
     spec:
-      
+      replicas: 1
       containers:
         - env:
             - name: PHOTOPRISM_ADMIN_PASSWORD 
