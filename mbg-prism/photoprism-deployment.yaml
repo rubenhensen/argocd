@@ -47,7 +47,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_CHOWN
               value: "false"
             - name: PHOTOPRISM_DISABLE_CLASSIFICATION
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_FACES
               value: "false"
             - name: PHOTOPRISM_DISABLE_RAW
@@ -55,7 +55,7 @@ spec:
             - name: PHOTOPRISM_DISABLE_SETTINGS
               value: "true"
             - name: PHOTOPRISM_DISABLE_TENSORFLOW
-              value: "false"
+              value: "true"
             - name: PHOTOPRISM_DISABLE_TLS
               value: "true"
             - name: PHOTOPRISM_DISABLE_VECTORS
