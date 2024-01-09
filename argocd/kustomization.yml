@@ -6,4 +6,4 @@ resources:
 ## changes to config maps
 namespace: argocd
 patchesStrategicMerge: # deprecated, but patches replacement does not work for some reason
-- overlays/argo-cmd-param-cm.yml
+- overlays/argo-cmd-params-cm.yml
