@@ -9,6 +9,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/service.serversscheme: https
 spec:
   rules:
   - host: argocd.hensen.io
@@ -16,12 +17,11 @@ spec:
       paths:
       - path: /
         pathType: Prefix
-        priority: 10
         backend:
           service:
             name: argocd-server
             port: 
-              number: 80
+              name: http
             
   # TLS configuration for HTTPS
   tls:
