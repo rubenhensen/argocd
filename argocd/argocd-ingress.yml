@@ -18,7 +18,7 @@ spec:
           service:
             name: argocd-server
             port:
-              name: http
+              name: https
   # TLS configuration for HTTPS
   tls:
     # TLS secretName used on ClusterIssuer
