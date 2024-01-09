@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+- argocd-ingress.yml
 ## changes to config maps
 namespace: argocd
 patchesStrategicMerge: # deprecated, but patches replacement does not work for some reason
