@@ -7,19 +7,22 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
     # Use Traefik as the Ingress controller
     kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
 spec:
-  ingressClassName: traefik
   rules:
   - host: argocd.hensen.io
     http:
       paths:
       - path: /
-        pathType: ImplementationSpecific
+        pathType: Prefix
+        priority: 10
         backend:
           service:
             name: argocd-server
-            port:
-              name: http
+            port: 
+              number: 80
+            
   # TLS configuration for HTTPS
   tls:
     # TLS secretName used on ClusterIssuer
