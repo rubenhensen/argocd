@@ -8,7 +8,6 @@ metadata:
     # Use Traefik as the Ingress controller
     kubernetes.io/ingress.class: traefik
 spec:
-  ingressClassName: traefik
   rules:
   - host: argocd.hensen.io
     http:
