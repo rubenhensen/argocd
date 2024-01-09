@@ -75,6 +75,8 @@ Then we grab the kubeconfig from the control-plane node:$ cat /etc/rancher/k3s/k
 
 Copy the output to a file named config and move it to the .kube folder, which is where kubectl takes it configuration from. The .kube folder should be in ~/.kube/config. The kubeconfig contains the keys to completely control everything in your cluster, so treat it like you would any ssh private key.
 Change the server value from 127.0.0.1 to your ip!
+
+ufw disable!!
 <span style="white-space: pre-wrap;">Adding network attached storage</span>
 
 
