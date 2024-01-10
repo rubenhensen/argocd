@@ -7,3 +7,4 @@ mbg-prism/mbg-secrets.yml
 mbg-prism/mbg-secrets-upload.yml
 tempdelete
 prometheus-grafana-alertmanager-app.yml
+grafana-secrets.yml
