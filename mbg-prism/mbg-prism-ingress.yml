@@ -4,7 +4,7 @@ metadata:
   name: mbg-photoprism-ingress
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    traefik.ingress.kubernetes.io/router.middlewares: mbg-prism-home-to-album-redirectregex@kubernetescrd
+    # traefik.ingress.kubernetes.io/router.middlewares: mbg-prism-home-to-album-redirectregex@kubernetescrd
     # traefik.ingress.kubernetes.io/router.middlewares: ingress-traefik-secureheaders
     # Use Traefik as the Ingress controller
     kubernetes.io/ingress.class: traefik
