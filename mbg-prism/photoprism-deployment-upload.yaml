@@ -87,7 +87,7 @@ spec:
             - name: PHOTOPRISM_UPLOAD_NSFW
               value: "true"
             - name: PHOTOPRISM_WORKERS
-              value: "2"
+              value: "4"
           image: photoprism/photoprism:latest
           name: mbg-photoprism-upload
           ports:
