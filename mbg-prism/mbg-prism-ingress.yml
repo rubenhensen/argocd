@@ -38,7 +38,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mbg-photoprism-svc
+            name: sol-auth-svc
             port:
               name: http
   - host: fotoupload.scoutingmbg.nl
