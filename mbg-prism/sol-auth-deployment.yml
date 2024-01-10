@@ -12,10 +12,6 @@ spec:
       labels:
         app: sol-auth
     spec:
-      hostAliases:
-      - ip: "host-gateway"
-        hostnames:
-        - "gateway.docker.internal"
       # securityContext:
       #     runAsUser: 1000
       #     runAsGroup: 1000
