@@ -24,7 +24,7 @@ spec:
               memory: 10Mi
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8002
               hostPort: 8002
               protocol: TCP
       restartPolicy: Always
