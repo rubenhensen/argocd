@@ -17,7 +17,7 @@ spec:
       #     runAsGroup: 1000
       #     fsGroup: 1000
       containers:
-        - image: hebury/sol-auth:1.20
+        - image: hebury/sol-auth:1.21
           name: sol-auth
           resources: 
             requests:
