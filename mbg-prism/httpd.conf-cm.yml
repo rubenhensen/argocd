@@ -87,6 +87,11 @@ data:
       Require all granted
     </Location>
 
+    <Location "/api/v1/ws">
+      AuthType None
+      Require all granted
+    </Location>
+
     <Location "/static">
       AuthType None
       Require all granted
