@@ -34,7 +34,7 @@ spec:
             postStart:
               exec:
                 command:
-                  - /bin/sh
+                  - /bin/bash
                   - -c
                   - >
                     ln -s /config/httpd.conf /usr/local/apache2/conf/httpd.conf
