@@ -30,14 +30,6 @@ spec:
           volumeMounts:
           - name: config-volume
             mountPath: /config/
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  - /bin/bash
-                  - -c
-                  - >
-                    ln -s /config/httpd.conf /usr/local/apache2/conf/httpd.conf
       volumes:
         - name: config-volume
           configMap:
