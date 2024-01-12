@@ -17,15 +17,25 @@ spec:
       #     runAsGroup: 1000
       #     fsGroup: 1000
       containers:
-        - image: hebury/sol-auth:1.26
+        - image: hebury/sol-auth:2.0
           name: sol-auth
           resources: 
             requests:
               memory: 10Mi
+            limits: 
+              memory: 8 Gi
+              cpu: "8"
           ports:
             - name: http
               containerPort: 8002
               hostPort: 8002
               protocol: TCP
+          volumeMounts:
+          - name: config-volume
+            mountPath: /usr/local/apache2/conf/httpd.conf
+      volumes:
+        - name: config-volume
+          configMap:
+            name: httpd-config
       restartPolicy: Always
       terminationGracePeriodSeconds: 5

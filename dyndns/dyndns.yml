@@ -18,6 +18,12 @@ spec:
       containers:
         - name: dyndns
           image: hebury/dyndns:1.20
+          resources:
+            requests:
+              memory: 10 Mi
+            limits: 
+              memory: 8 Gi
+              cpu: "8"
           volumeMounts:
             - name: secret-vol
               mountPath: /secret
