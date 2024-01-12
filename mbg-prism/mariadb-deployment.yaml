@@ -51,9 +51,7 @@ spec:
           resources:
             requests:
               memory: "10Mi"
-            limits: 
-              memory: "8Gi"
-              cpu: "8"
+
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: mariadb-claim2

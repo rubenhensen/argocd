@@ -5364,9 +5364,7 @@ spec:
           resources:
             requests:
               memory: "10Mi"
-            limits: 
-              memory: "8Gi"
-              cpu: "8"
+
           image: "quay.io/jetstack/cert-manager-cainjector:v1.13.3"
           imagePullPolicy: IfNotPresent
           args:
@@ -5428,9 +5426,7 @@ spec:
           resources:
             requests:
               memory: "10Mi"
-            limits: 
-              memory: "8Gi"
-              cpu: "8"
+
           image: "quay.io/jetstack/cert-manager-controller:v1.13.3"
           imagePullPolicy: IfNotPresent
           args:
@@ -5498,9 +5494,7 @@ spec:
           resources:
             requests:
               memory: "10Mi"
-            limits: 
-              memory: "8Gi"
-              cpu: "8"
+
           image: "quay.io/jetstack/cert-manager-webhook:v1.13.3"
           imagePullPolicy: IfNotPresent
           args:
