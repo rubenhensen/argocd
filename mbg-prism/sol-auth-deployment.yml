@@ -22,7 +22,6 @@ spec:
           resources: 
             requests:
               memory: "10Mi"
-
           ports:
             - name: http
               containerPort: 8002
@@ -34,6 +33,6 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: httpd-config
+            name: httpd-conf
       restartPolicy: Always
       terminationGracePeriodSeconds: 5
