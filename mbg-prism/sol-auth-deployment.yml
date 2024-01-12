@@ -23,7 +23,7 @@ spec:
             requests:
               memory: 10Mi
             limits: 
-              memory: 8 Gi
+              memory: 8Gi
               cpu: "8"
           ports:
             - name: http

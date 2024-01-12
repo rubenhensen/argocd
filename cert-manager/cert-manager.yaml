@@ -5365,7 +5365,7 @@ spec:
             requests:
               memory: 10 Mi
             limits: 
-              memory: 8 Gi
+              memory: 8Gi
               cpu: "8"
           image: "quay.io/jetstack/cert-manager-cainjector:v1.13.3"
           imagePullPolicy: IfNotPresent
@@ -5429,7 +5429,7 @@ spec:
             requests:
               memory: 10 Mi
             limits: 
-              memory: 8 Gi
+              memory: 8Gi
               cpu: "8"
           image: "quay.io/jetstack/cert-manager-controller:v1.13.3"
           imagePullPolicy: IfNotPresent
@@ -5499,7 +5499,7 @@ spec:
             requests:
               memory: 10 Mi
             limits: 
-              memory: 8 Gi
+              memory: 8Gi
               cpu: "8"
           image: "quay.io/jetstack/cert-manager-webhook:v1.13.3"
           imagePullPolicy: IfNotPresent

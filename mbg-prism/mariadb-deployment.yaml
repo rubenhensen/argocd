@@ -52,7 +52,7 @@ spec:
             requests:
               memory: 10 Mi
             limits: 
-              memory: 8 Gi
+              memory: 8Gi
               cpu: "8"
           volumeMounts:
             - mountPath: /var/lib/mysql
