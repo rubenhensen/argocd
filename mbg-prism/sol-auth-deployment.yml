@@ -29,7 +29,15 @@ spec:
               protocol: TCP
           volumeMounts:
           - name: config-volume
-            mountPath: /usr/local/apache2/conf/
+            mountPath: /config/
+          lifecycle:
+            postStart:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - >
+                    ln -s /config/httpd.conf /usr/local/apache2/conf/httpd.conf
       volumes:
         - name: config-volume
           configMap:
