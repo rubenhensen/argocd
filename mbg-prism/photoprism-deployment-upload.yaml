@@ -95,9 +95,11 @@ spec:
               hostPort: 2342
               protocol: TCP
               name: http
+          nodeSelector:
+            rp_version: 5
           resources:
             requests:
-              memory: "7000Mi"
+              memory: "1000Mi"
               # cpu: "4000m"
           volumeMounts:
             - mountPath: /photoprism/originals
