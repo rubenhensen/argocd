@@ -89,8 +89,6 @@ spec:
             - name: PHOTOPRISM_WORKERS
               value: "4"
           image: photoprism/photoprism:latest
-          nodeSelector:
-            rp_version: 5
           name: mbg-photoprism
           resources:
             requests:
@@ -124,6 +122,8 @@ spec:
                 value: https
               - name: Host
                 value: mbg.hensen.io
+      nodeSelector:
+        rp_version: "5"
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
