@@ -111,6 +111,10 @@ data:
     ProxyPassReverse / http://mbg-photoprism-svc:2342/
     ProxyRequests off
 
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Max-Age "1000"
+    Header always set Access-Control-Allow-Headers "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
+
     <IfModule dir_module>
         DirectoryIndex index.html
     </IfModule>
