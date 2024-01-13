@@ -95,8 +95,6 @@ spec:
               hostPort: 2342
               protocol: TCP
               name: http
-          nodeSelector:
-            rp_version: 5
           resources:
             requests:
               memory: "1000Mi"
@@ -124,6 +122,8 @@ spec:
                 value: https
               - name: Host
                 value: mbgupload.hensen.io
+      nodeSelector:
+        rp_version: "5"
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
