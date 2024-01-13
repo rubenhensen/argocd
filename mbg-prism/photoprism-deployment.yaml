@@ -130,7 +130,6 @@ spec:
         - name: photoprism-claim2
           persistentVolumeClaim:
             claimName: photoprism-claim2
-            readOnly: true
         - name: photoprism-claim3
           persistentVolumeClaim:
             claimName: photoprism-claim3
