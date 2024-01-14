@@ -13,6 +13,16 @@ spec:
       labels:
         app: mbg-photoprism-upload
     spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              preference: 
+                matchExpressions:
+                - key: rp_version
+                  operator: In
+                  values:
+                  - "5"  
       containers:
         - env:
             - name: PHOTOPRISM_ADMIN_PASSWORD 
@@ -122,8 +132,6 @@ spec:
                 value: https
               - name: Host
                 value: mbgupload.hensen.io
-      nodeSelector:
-        rp_version: "5"
       restartPolicy: Always
       terminationGracePeriodSeconds: 10
       volumes:
