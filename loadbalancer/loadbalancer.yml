@@ -6,8 +6,9 @@ metadata:
   spec: 
     healthCheckNodePort: 8000
     ports: 
-      port: 8765
-      targetPort: 9376
+    - name: "8000"
+      port: 8000
+      targetPort: 8000
     selector:
       app: loadbalancer
     type: LoadBalancer
