@@ -1,15 +1,14 @@
-
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: loadbalancer-service
-  spec: 
-    healthCheckNodePort: 8000
-    ports: 
-    - name: "8000"
-      port: 8000
-      targetPort: 8000
-    selector:
-      app: loadbalancer
-    type: LoadBalancer
-    externalTrafficPolicy: Local
+  name: my-service
+spec:
+  selector:
+    app.kubernetes.io/name: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  healthCheckNodePort: 8000
