@@ -8,7 +8,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376
+      targetPort: 32766
   type: LoadBalancer
   externalTrafficPolicy: Local
-  healthCheckNodePort: 8000
+  healthCheckNodePort: 32767
