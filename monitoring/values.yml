@@ -34,16 +34,16 @@ alertmanager:
   enabled: true
   ingress:
     enabled: false
-  alertmanagerSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          storageClassName: nfs-csi
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 50Gi
-          selector: {}
+  # alertmanagerSpec:
+  #   storage:
+  #     volumeClaimTemplate:
+  #       spec:
+  #         storageClassName: nfs-csi
+  #         accessModes: ["ReadWriteOnce"]
+  #         resources:
+  #           requests:
+  #             storage: 50Gi
+  #         selector: {}
 
 grafana:
   enabled: true
