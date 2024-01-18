@@ -151,6 +151,27 @@ content = "@"
 
 [[record]]
 hostname = "hensen.io"
+entry = "grafana"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "alertmanager"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
+entry = "mbg"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
 entry = "nas"
 ttl = 86400
 type = "CNAME"
