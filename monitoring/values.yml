@@ -210,7 +210,7 @@ prometheus:
          resources:
            requests:
              storage: 50Gi
-       selector: {}
+       selector: prometheus-pvc
 
 thanosRuler:
   enabled: false
