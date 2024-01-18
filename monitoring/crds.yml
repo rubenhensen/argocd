@@ -11,17 +11,13 @@ spec:
     targetRevision: kube-prometheus-stack-31.0.0
     directory:
       recurse: true
-    syncOptions:
-    - Replace=true
-  - repoURL: 'https://github.com/rubenhensen/argocd.git'
-    targetRevision: main
-    ref: values
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitoring
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
+    - Replace=true
     automated:
       prune: true
       selfHeal: true  
