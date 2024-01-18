@@ -5,14 +5,17 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    chart: kube-prometheus-stack
+  sources:
+  - chart: kube-prometheus-stack
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 55.7.0
+    targetRevision: 55.11.0
     helm:
       releaseName: kube-prometheus-stack
       valueFiles:
-        - values.yml
+        - $values/monitoring/values.yml
+  - repoURL: 'https://github.com/rubenhensen/argocd.git'
+    targetRevision: main
+    ref: values
   destination:
     server: "https://kubernetes.default.svc"
     namespace: monitoring
