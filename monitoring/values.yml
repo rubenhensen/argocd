@@ -34,6 +34,16 @@ alertmanager:
   enabled: true
   ingress:
     enabled: false
+  alertmanagerSpec:
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: nfs-csi
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 50Gi
+          selector: {}
 
 grafana:
   enabled: true
@@ -48,6 +58,22 @@ grafana:
     existingSecret: grafana-admin-credentials
     userKey: admin-user
     passwordKey: admin-password
+  
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    annotations: 
+      kubernetes.io/ingress.class: traefik
+      cert-manager.io/cluster-issuer: letsencrypt-production
+    labels: {}
+    hosts: 
+    - grafana.hensen.io
+    path: /
+    tls: 
+    - secretName: grafana-general-tls
+      hosts:
+      - grafana.hensen.io
+
 
 kubeApiServer:
   enabled: true
@@ -176,6 +202,15 @@ prometheus:
     retention: 6h
     enableAdminAPI: true
     walCompression: true
+    storageSpec: 
+     volumeClaimTemplate:
+       spec:
+         storageClassName: nfs-csi
+         accessModes: ["ReadWriteOnce"]
+         resources:
+           requests:
+             storage: 50Gi
+       selector: {}
 
 thanosRuler:
   enabled: false
