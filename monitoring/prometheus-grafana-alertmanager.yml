@@ -15,4 +15,4 @@ spec:
         - values.yml
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: kube-prometheus-stack
+    namespace: monitoring
