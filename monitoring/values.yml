@@ -70,7 +70,7 @@ grafana:
     - grafana.hensen.io
     path: /
     tls: 
-    - secretName: grafana-general-tls
+    - secretName: letsencrypt-production.key
       hosts:
       - grafana.hensen.io
 
