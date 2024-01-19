@@ -34,16 +34,27 @@ alertmanager:
   enabled: true
   ingress:
     enabled: false
-  # alertmanagerSpec:
-  #   storage:
-  #     volumeClaimTemplate:
-  #       spec:
-  #         storageClassName: nfs-csi
-  #         accessModes: ["ReadWriteOnce"]
-  #         resources:
-  #           requests:
-  #             storage: 50Gi
-  #         selector: {}
+    ingressClassName: traefik
+    annotations: 
+      kubernetes.io/ingress.class: traefik
+      cert-manager.io/cluster-issuer: letsencrypt-production
+    labels: {}
+    hosts: 
+    - alert.hensen.io
+    path: /
+    tls: 
+    - secretName: letsencrypt-production.key
+      hosts:
+      - alert.hensen.io
+  alertmanagerSpec:
+    storage: 
+     volumeClaimTemplate:
+       spec:
+         storageClassName: nfs-csi
+         accessModes: ["ReadWriteOnce"]
+         resources:
+           requests:
+             storage: 50Gi
 
 grafana:
   enabled: true
