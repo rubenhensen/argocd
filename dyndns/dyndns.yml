@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dyndns
-          image: hebury/dyndns:1.21
+          image: hebury/dyndns:1.22
           resources:
             requests:
               memory: "10Mi"
@@ -29,14 +29,7 @@ spec:
             - name: config-vol
               mountPath: /config
               readOnly: true
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  - /bin/sh
-                  - -c
-                  - >
-                    ln -s /config/go-transip-dyndns.toml /etc/go-transip-dyndns.toml
+
       volumes:
       - name: secret-vol
         secret:
