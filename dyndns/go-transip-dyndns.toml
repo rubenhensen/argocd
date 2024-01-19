@@ -172,6 +172,13 @@ content = "@"
 
 [[record]]
 hostname = "hensen.io"
+entry = "alert"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
 entry = "nas"
 ttl = 86400
 type = "CNAME"
