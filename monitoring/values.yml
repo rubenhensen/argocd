@@ -1,4 +1,4 @@
-fullnameOverride: prometheus
+fullnameOverride: ""
 
 defaultRules:
   create: true
@@ -42,7 +42,8 @@ alertmanager:
     labels: {}
     hosts: 
     - alert.hensen.io
-    path: /
+    path: 
+    - /
     tls: 
     - secretName: letsencrypt-production.key
       hosts:
