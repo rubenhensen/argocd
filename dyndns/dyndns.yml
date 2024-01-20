@@ -1,39 +1,39 @@
-kind: Deployment
-apiVersion: apps/v1
-metadata:
-  name: dyndns
-  labels:
-    app: dyndns
+# kind: Deployment
+# apiVersion: apps/v1
+# metadata:
+#   name: dyndns
+#   labels:
+#     app: dyndns
 
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: dyndns
-  template:
-    metadata:
-      labels:
-        app: dyndns
-    spec:
-      containers:
-        - name: dyndns
-          image: hebury/dyndns:1.22
-          resources:
-            requests:
-              memory: "10Mi"
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: dyndns
+#   template:
+#     metadata:
+#       labels:
+#         app: dyndns
+#     spec:
+#       containers:
+#         - name: dyndns
+#           image: hebury/dyndns:1.22
+#           resources:
+#             requests:
+#               memory: "10Mi"
 
-          volumeMounts:
-            - name: secret-vol
-              mountPath: /secret
-              readOnly: true
-            - name: config-vol
-              mountPath: /config
-              readOnly: true
+#           volumeMounts:
+#             - name: secret-vol
+#               mountPath: /secret
+#               readOnly: true
+#             - name: config-vol
+#               mountPath: /config
+#               readOnly: true
 
-      volumes:
-      - name: secret-vol
-        secret:
-          secretName: transip-key
-      - name: config-vol
-        configMap:
-          name: go-transip-dyndns-configmap
+#       volumes:
+#       - name: secret-vol
+#         secret:
+#           secretName: transip-key
+#       - name: config-vol
+#         configMap:
+#           name: go-transip-dyndns-configmap

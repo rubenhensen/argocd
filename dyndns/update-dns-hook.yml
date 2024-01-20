@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: app-slack-notification-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: dyndns
+        image: hebury/dyndns:1.22
+      restartPolicy: Never
+      volumeMounts:
+        - name: secret-vol
+          mountPath: /secret
+          readOnly: true
+        - name: config-vol
+          mountPath: /config
+          readOnly: true
+    volumes:
+    - name: secret-vol
+      secret:
+        secretName: transip-key
+    - name: config-vol
+      configMap:
+        name: go-transip-dyndns-configmap
+        
+  backoffLimit: 2
