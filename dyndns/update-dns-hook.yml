@@ -12,7 +12,6 @@ spec:
       containers:
       - name: dyndns
         image: hebury/dyndns:1.22
-        restartPolicy: Never
         volumeMounts:
           - name: secret-vol
             mountPath: /secret
@@ -20,6 +19,7 @@ spec:
           - name: config-vol
             mountPath: /config
             readOnly: true
+      restartPolicy: Never
       volumes:
       - name: secret-vol
         secret:
