@@ -5,7 +5,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
     # traefik.ingress.kubernetes.io/router.middlewares: mbg-prism-home-to-album-redirectregex@kubernetescrd
-    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+    # traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
     # Use Traefik as the Ingress controller
     kubernetes.io/ingress.class: traefik
 spec:
