@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: uptime-kuma
+  labels:
+    app: uptime-kuma
+# docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uptime-kuma
+  template:
+    metadata:
+      labels:
+        app: uptime-kuma
+    spec:
+      containers:
+        - name: uptime-kuma
+          image: louislam/uptime-kuma:1
+          resources:
+            requests:
+              memory: "10Mi"
+
+          volumeMounts:
+            - name: kuma-pvc
+              mountPath: /app/data
+      volumes:
+        - name: kuma-pvc
+          persistentVolumeClaim:
+            claimName: kuma-pvc
