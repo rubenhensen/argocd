@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: app-slack-notification-
+  generateName: dyndns-sync-
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
@@ -26,5 +26,5 @@ spec:
     - name: config-vol
       configMap:
         name: go-transip-dyndns-configmap
-        
+
   backoffLimit: 2
