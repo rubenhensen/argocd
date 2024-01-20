@@ -8,3 +8,4 @@ configMapGenerator:
 resources:
 - dyndns.yml
 - transip-key-sealed.yml
+- update-dns-hook.yml
