@@ -50,7 +50,7 @@ spec:
           name: mariadb
           resources:
             requests:
-              memory: "10Mi"
+              memory: "1500Mi"
 
           volumeMounts:
             - mountPath: /var/lib/mysql
