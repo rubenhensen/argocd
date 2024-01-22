@@ -20,7 +20,7 @@ spec:
           image: louislam/uptime-kuma:1
           resources:
             requests:
-              memory: "10Mi"
+              memory: "205Mi"
 
           volumeMounts:
             - name: kuma-pvc
