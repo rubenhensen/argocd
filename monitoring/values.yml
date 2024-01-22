@@ -47,7 +47,7 @@ alertmanager:
     tls: 
       - hosts:
           - alert.hensen.io
-        secretName: letsencrypt-production.key
+        secretName: letsencrypt-production-two.key
   alertmanagerSpec:
     storage: 
      volumeClaimTemplate:
