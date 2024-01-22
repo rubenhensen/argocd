@@ -1,4 +1,5 @@
 fullnameOverride: ""
+namespaceOverride: "monitoring"
 
 defaultRules:
   create: true
