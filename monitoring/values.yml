@@ -45,9 +45,9 @@ alertmanager:
     path: 
     - /
     tls: 
-    - secretName: letsencrypt-production.key
-      hosts:
-      - alert.hensen.io
+      - hosts:
+          - alert.hensen.io
+        secretName: letsencrypt-production.key
   alertmanagerSpec:
     storage: 
      volumeClaimTemplate:
