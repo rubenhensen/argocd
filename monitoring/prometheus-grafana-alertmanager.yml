@@ -8,7 +8,7 @@ spec:
   sources:
   - chart: kube-prometheus-stack
     repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 55.11.0
+    targetRevision: 56.0.3
     helm:
       releaseName: kube-prometheus-stack
       # skipCrds: true
@@ -23,7 +23,7 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-    - ServerSideApply=true
+    - Replace=true
     automated:
       prune: true
       selfHeal: true
