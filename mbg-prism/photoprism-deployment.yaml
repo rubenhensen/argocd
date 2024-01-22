@@ -102,7 +102,7 @@ spec:
           name: mbg-photoprism
           resources:
             requests:
-              memory: "128Mi"
+              memory: "400Mi"
               cpu: "100m"
           ports:
             - containerPort: 2342
