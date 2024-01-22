@@ -19,7 +19,7 @@ spec:
     ref: values
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: monitoring-three
+    namespace: kube-prometheus-stack
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
