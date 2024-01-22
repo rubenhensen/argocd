@@ -23,7 +23,8 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-    - Replace=true
+    - ServerSideApply=true
+    # - Replace=true
     automated:
       prune: true
       selfHeal: true
