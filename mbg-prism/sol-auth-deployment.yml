@@ -21,7 +21,7 @@ spec:
           name: sol-auth
           resources: 
             requests:
-              memory: "10Mi"
+              memory: "1100Mi"
           ports:
             - name: http
               containerPort: 8002
