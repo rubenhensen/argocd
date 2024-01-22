@@ -1,5 +1,5 @@
 fullnameOverride: ""
-namespaceOverride: "monitoring"
+namespaceOverride: "monitoring-three"
 
 defaultRules:
   create: true
