@@ -6,6 +6,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: haproxy # Name is case sensitive
+  namespace: haproxy
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
