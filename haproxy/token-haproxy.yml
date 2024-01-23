@@ -3,5 +3,5 @@ kind: Secret
 metadata:
   name: haproxy-token
   annotations:
-    kubernetes.io/service-account.name: haproxy
+    kubernetes.io/service-account.name: haproxy-sa
 type: kubernetes.io/service-account-token
