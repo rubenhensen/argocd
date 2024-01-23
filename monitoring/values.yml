@@ -66,6 +66,7 @@ grafana:
   forceDeployDashboards: false
   defaultDashboardsEnabled: true
   defaultDashboardsTimezone: utc
+  defaultDashboardsEditable: false
   serviceMonitor:
     enabled: true
   admin:
