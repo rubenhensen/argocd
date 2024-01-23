@@ -218,6 +218,9 @@ prometheus:
     retention: 6h
     enableAdminAPI: true
     walCompression: true
+    resources: 
+      requests:
+        memory: 4200Mi
     storageSpec: 
      volumeClaimTemplate:
        spec:
