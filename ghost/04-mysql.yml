@@ -38,9 +38,9 @@ spec:
           envFrom:
             - secretRef:
                 name: mysql-ghostk3s
-          # resources:
-          #   requests:
-          #     memory: 16Mi
+          resources:
+            requests:
+              memory: 1000Mi
           #     cpu: "0"
           #   limits:
           #     memory: 1Gi

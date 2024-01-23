@@ -65,12 +65,12 @@ spec:
             - name: NODE_ENV
               value: production
           resources:
-            limits:
-              memory: "1000Mi"
-              cpu: "2000m"
+            # limits:
+            #   memory: "1000Mi"
+            #   cpu: "2000m"
             requests:
-              cpu: '0'
-              memory: 16Mi
+              # cpu: '0'
+              memory: 350Mi
           volumeMounts:
             - name: ghostk3s-static-ghost
               mountPath: /var/lib/ghost/content
