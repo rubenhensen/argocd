@@ -10,7 +10,7 @@ spec:
     path: haproxy
   destination:
     server: https://kubernetes.default.svc
-    namespace: kube-system
+    namespace: haproxy
   syncPolicy:
     automated:
       prune: true
