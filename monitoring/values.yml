@@ -220,7 +220,7 @@ prometheus:
     walCompression: true
     resources: 
       requests:
-        memory: 4200Mi
+        memory: 3000Mi
     storageSpec: 
      volumeClaimTemplate:
        spec:
