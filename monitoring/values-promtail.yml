@@ -76,7 +76,7 @@ image:
   # -- Docker image repository
   repository: grafana/promtail
   # -- Overrides the image tag whose default is the chart's appVersion
-  tag: null
+  # tag: null
   # -- Docker image pull policy
   pullPolicy: IfNotPresent
 
@@ -90,7 +90,7 @@ hostAliases: []
 #      - domain.tld
 
 # -- Controls whether the pod has the `hostNetwork` flag set.
-hostNetwork: null
+# hostNetwork: null
 
 # -- Annotations for the DaemonSet
 annotations: {}
@@ -110,7 +110,7 @@ podAnnotations: {}
 #  prometheus.io/port: "http-metrics"
 
 # -- The name of the PriorityClass
-priorityClassName: null
+# priorityClassName: null
 
 # -- Liveness probe
 livenessProbe: {}
@@ -157,14 +157,14 @@ rbac:
 
 # -- The name of the Namespace to deploy
 # If not set, `.Release.Namespace` is used
-namespace: null
+# namespace: null
 
 serviceAccount:
   # -- Specifies whether a ServiceAccount should be created
   create: true
   # -- The name of the ServiceAccount to use.
   # If not set and `create` is true, a name is generated using the fullname template
-  name: null
+  # name: null
   # -- Image pull secrets for the service account
   imagePullSecrets: []
   # -- Annotations for the service account
@@ -240,7 +240,7 @@ serviceMonitor:
   # -- If enabled, ServiceMonitor resources for Prometheus Operator are created
   enabled: false
   # -- Alternative namespace for ServiceMonitor resources
-  namespace: null
+  # namespace: null
   # -- Namespace selector for ServiceMonitor resources
   namespaceSelector: {}
   # -- ServiceMonitor annotations
@@ -248,9 +248,9 @@ serviceMonitor:
   # -- Additional ServiceMonitor labels
   labels: {}
   # -- ServiceMonitor scrape interval
-  interval: null
+  # interval: null
   # -- ServiceMonitor scrape timeout in Go duration format (e.g. 15s)
-  scrapeTimeout: null
+  # scrapeTimeout: null
   # -- ServiceMonitor relabel configs to apply to samples before scraping
   # https://github.com/prometheus-operator/prometheus-operator/blob/master/Documentation/api.md#relabelconfig
   # (defines `relabel_configs`)
@@ -266,7 +266,7 @@ serviceMonitor:
   # -- ServiceMonitor will use http by default, but you can pick https as well
   scheme: http
   # -- ServiceMonitor will use these tlsConfig settings to make the health check requests
-  tlsConfig: null
+  # tlsConfig: null
   # -- Prometheus rules will be deployed for alerting purposes
   prometheusRule:
     enabled: false
