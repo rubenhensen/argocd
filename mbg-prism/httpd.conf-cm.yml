@@ -9,7 +9,6 @@ data:
     LoadModule mpm_event_module modules/mod_mpm_event.so
     LoadModule authn_core_module modules/mod_authn_core.so
     
-    LoadModule authz_groupfile_module modules/mod_authz_groupfile.so
     LoadModule authz_user_module modules/mod_authz_user.so
     LoadModule authz_core_module modules/mod_authz_core.so
     LoadModule access_compat_module modules/mod_access_compat.so
