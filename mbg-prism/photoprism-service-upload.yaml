@@ -5,8 +5,8 @@ metadata:
 spec:
   ports:
     - name: http
-      port: 2342
-      targetPort: 2342
+      port: 2343
+      targetPort: 2343
   selector:
     app: mbg-photoprism-upload
 status:
