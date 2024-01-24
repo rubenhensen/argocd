@@ -26,8 +26,8 @@ data:
 
     <IfModule mpm_event_module>
       StartServers          4
-      MinSpareServers       2
-      MaxSpareServers       8
+      MinSpareThreads       2
+      MaxSpareThreads       50
       ServerLimit         128
       MaxClients           50
       MaxRequestsPerChild 2000
