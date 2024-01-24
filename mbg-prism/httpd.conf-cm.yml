@@ -24,15 +24,6 @@ data:
     LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
     LoadModule rewrite_module modules/mod_rewrite.so
 
-    <IfModule mpm_event_module>
-      StartServers          4
-      MinSpareThreads       2
-      MaxSpareThreads       50
-      ServerLimit         128
-      MaxClients           50
-      MaxRequestsPerChild 2000
-    </IfModule>
-
     <IfModule unixd_module>
     User www-data
     Group www-data
