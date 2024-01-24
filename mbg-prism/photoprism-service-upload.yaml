@@ -6,7 +6,7 @@ spec:
   ports:
     - name: http
       port: 2343
-      targetPort: 2343
+      targetPort: 2342
   selector:
     app: mbg-photoprism-upload
 status:
