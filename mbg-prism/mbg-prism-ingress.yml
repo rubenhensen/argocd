@@ -20,7 +20,7 @@ spec:
           service:
             name: mbg-photoprism-svc
             port:
-              name: http
+              name: http-svc
   - host: mbgupload.hensen.io
     http:
       paths:
@@ -30,7 +30,7 @@ spec:
           service:
             name: mbg-photoprism-upload-svc
             port:
-              name: http
+              name: http-svc
   - host: foto.scoutingmbg.nl
     http:
       paths:
@@ -40,7 +40,7 @@ spec:
           service:
             name: sol-auth-svc
             port:
-              name: http
+              name: http-svc
   - host: fotoupload.scoutingmbg.nl
     http:
       paths:
@@ -50,7 +50,7 @@ spec:
           service:
             name: mbg-photoprism-upload-svc
             port:
-              name: http
+              name: http-svc
   # TLS configuration for HTTPS
   tls:
     # TLS secretName used on ClusterIssuer
