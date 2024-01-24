@@ -4,7 +4,7 @@ metadata:
   name: sol-auth-svc
 spec:
   ports:
-    - name: http
+    - name: http-svc
       port: 8002
       targetPort: 8002
   selector:
