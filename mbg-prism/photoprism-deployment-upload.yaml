@@ -102,7 +102,6 @@ spec:
           name: mbg-photoprism-upload
           ports:
             - containerPort: 2342
-              hostPort: 2343
               protocol: TCP
               name: http
           resources:
