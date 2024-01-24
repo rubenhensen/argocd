@@ -24,6 +24,10 @@ data:
     LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
     LoadModule rewrite_module modules/mod_rewrite.so
 
+    <IfModule mpm_event_module>
+        MaxClients          20
+    </IfModule>
+
     <IfModule unixd_module>
     User www-data
     Group www-data
