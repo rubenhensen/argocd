@@ -10,7 +10,6 @@ data:
     LoadModule authn_core_module modules/mod_authn_core.so
     LoadModule authz_core_module modules/mod_authz_core.so
     
-    LoadModule auth_basic_module modules/mod_auth_basic.so
     LoadModule reqtimeout_module modules/mod_reqtimeout.so
     LoadModule filter_module modules/mod_filter.so
     LoadModule xml2enc_module modules/mod_xml2enc.so
