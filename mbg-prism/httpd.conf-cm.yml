@@ -25,7 +25,12 @@ data:
     LoadModule rewrite_module modules/mod_rewrite.so
 
     <IfModule mpm_event_module>
-        MaxClients          50
+      StartServers          4
+      MinSpareServers       2
+      MaxSpareServers       8
+      ServerLimit         128
+      MaxClients           50
+      MaxRequestsPerChild 2000
     </IfModule>
 
     <IfModule unixd_module>
