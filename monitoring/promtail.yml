@@ -1,31 +1,29 @@
-# kind: Deployment
-# apiVersion: apps/v1
-# metadata:
-#   name: uptime-kuma
-#   labels:
-#     app: uptime-kuma
-# # docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
-# spec:
-#   replicas: 1
-#   selector:
-#     matchLabels:
-#       app: uptime-kuma
-#   template:
-#     metadata:
-#       labels:
-#         app: uptime-kuma
-#     spec:
-#       containers:
-#         - name: uptime-kuma
-#           image: louislam/uptime-kuma:1
-#           resources:
-#             requests:
-#               memory: "205Mi"
-
-#           volumeMounts:
-#             - name: kuma-pvc
-#               mountPath: /app/data
-#       volumes:
-#         - name: kuma-pvc
-#           persistentVolumeClaim:
-#             claimName: kuma-pvc
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: loki
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - chart: promtail
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: 6.15.3
+    helm:
+      releaseName: loki
+      valueFiles:
+        - $values/monitoring/values-loki.yml
+  - repoURL: 'https://github.com/rubenhensen/argocd.git'
+    targetRevision: main
+    ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: monitoring
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    - ServerSideApply=true
+    # - Replace=true
+    automated:
+      prune: true
+      selfHeal: true
