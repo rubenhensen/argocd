@@ -1,8 +1,8 @@
 # -- Overrides the chart's name
-nameOverride: null
+# nameOverride: null
 
 # -- Overrides the chart's computed fullname
-fullnameOverride: null
+# fullnameOverride: null
 
 global:
   # -- Allow parent charts to override registry hostname
