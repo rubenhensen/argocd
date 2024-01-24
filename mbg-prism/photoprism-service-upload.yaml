@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
     - name: http-svc
-      port: 2342
+      port: 2343
       targetPort: http
   selector:
     app: mbg-photoprism-upload
