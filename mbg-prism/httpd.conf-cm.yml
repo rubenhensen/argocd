@@ -25,7 +25,7 @@ data:
     LoadModule rewrite_module modules/mod_rewrite.so
 
     <IfModule mpm_event_module>
-        MaxClients          20
+        MaxClients          50
     </IfModule>
 
     <IfModule unixd_module>
