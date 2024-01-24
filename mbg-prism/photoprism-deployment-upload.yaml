@@ -100,11 +100,11 @@ spec:
               value: "4"
           image: photoprism/photoprism:latest
           name: mbg-photoprism-upload
-          ports:
-            - containerPort: 2342
-              hostPort: 2342
-              protocol: TCP
-              name: http
+          # ports:
+          #   - containerPort: 2342
+          #     hostPort: 2342
+          #     protocol: TCP
+          #     name: http
           resources:
             requests:
               memory: "200Mi"
