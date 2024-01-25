@@ -178,7 +178,6 @@ loki:
 
     {{- with .Values.loki.memcached.results_cache }}
     query_range:
-      split_queries_by_interval: 24h
       align_queries_with_step: true
       {{- if and .enabled (or .host .addresses) }}
       cache_results: {{ .enabled }}
@@ -204,7 +203,6 @@ loki:
 
     {{- with .Values.loki.query_scheduler }}
     query_scheduler:
-      max_outstanding_requests_per_tenant: 10000
       {{- tpl (. | toYaml) $ | nindent 4 }}
     {{- end }}
 
@@ -230,7 +228,6 @@ loki:
 
     {{- with .Values.loki.frontend }}
     frontend:
-      max_outstanding_per_tenant: 10000
       {{- tpl (. | toYaml) $ | nindent 4 }}
     {{- end }}
 
@@ -348,7 +345,8 @@ loki:
   # -- Structured loki configuration, takes precedence over `loki.config`, `loki.schemaConfig`, `loki.storageConfig`
   structuredConfig: {}
   # -- Additional query scheduler config
-  query_scheduler: {}
+  query_scheduler:
+    max_outstanding_requests_per_tenant: 10000
   # -- Additional storage config
   storage_config:
     hedging:
@@ -368,6 +366,7 @@ loki:
     mode: ring
   frontend:
     scheduler_address: '{{ include "loki.querySchedulerAddress" . }}'
+    max_outstanding_per_tenant: 10000
   frontend_worker:
     scheduler_address: '{{ include "loki.querySchedulerAddress" . }}'
   # -- Optional distributor configuration
