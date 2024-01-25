@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: promtail
+  name: prometheus-grafana-alertmanager
   namespace: argocd
 spec:
   project: default
   sources:
-  - chart: promtail
-    repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 6.15.3
+  - chart: kube-prometheus-stack
+    repoURL: https://prometheus-community.github.io/helm-charts
+    targetRevision: 56.0.3
     helm:
-      releaseName: promtail
+      releaseName: kube-prometheus-stack
+      # skipCrds: true
       valueFiles:
-        - $values/monitoring/values-promtail.yml
+        - $values/monitoring/values/prometheus.yml
   - repoURL: 'https://github.com/rubenhensen/argocd.git'
     targetRevision: main
     ref: values
