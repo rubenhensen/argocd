@@ -178,7 +178,6 @@ loki:
 
     {{- with .Values.loki.memcached.results_cache }}
     query_range:
-      split_queries_by_interval: 24h
       align_queries_with_step: true
       {{- if and .enabled (or .host .addresses) }}
       cache_results: {{ .enabled }}
@@ -261,7 +260,7 @@ loki:
     reject_old_samples: true
     reject_old_samples_max_age: 168h
     max_cache_freshness_per_query: 10m
-    split_queries_by_interval: 15m
+    split_queries_by_interval: 24h
   # -- Provides a reloadable runtime configuration file for some specific configuration
   runtimeConfig: {}
   # -- Check https://grafana.com/docs/loki/latest/configuration/#common_config for more info on how to provide a common configuration
