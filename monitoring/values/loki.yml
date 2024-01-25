@@ -327,7 +327,6 @@ loki:
   # -- Configure memcached as an external cache for chunk and results cache. Disabled by default
   # must enable and specify a host for each cache you would like to use.
   memcached:
-    max_outstanding_requests_per_tenant: 10000
     chunk_cache:
       enabled: false
       host: ""
