@@ -178,6 +178,7 @@ loki:
 
     {{- with .Values.loki.memcached.results_cache }}
     query_range:
+      split_queries_by_interval: 24h
       align_queries_with_step: true
       {{- if and .enabled (or .host .addresses) }}
       cache_results: {{ .enabled }}
