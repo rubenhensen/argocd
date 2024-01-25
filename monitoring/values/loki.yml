@@ -244,7 +244,7 @@ loki:
     tracing:
       enabled: {{ .Values.loki.tracing.enabled }}
   # Should authentication be enabled
-  auth_enabled: true
+  auth_enabled: false
   # -- memberlist configuration (overrides embedded default)
   memberlistConfig: {}
   # -- Extra memberlist configuration
