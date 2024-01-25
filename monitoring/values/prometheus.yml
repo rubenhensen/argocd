@@ -76,7 +76,7 @@ grafana:
   additionalDataSources:
     - name: Loki
       type: loki
-      url: http://loki-backend:3100
+      url: http://loki:3100
   
   ingress:
     enabled: true
