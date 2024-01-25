@@ -178,7 +178,6 @@ loki:
 
     {{- with .Values.loki.memcached.results_cache }}
     query_range:
-      max_outstanding_requests_per_tenant: 10000
       align_queries_with_step: true
       {{- if and .enabled (or .host .addresses) }}
       cache_results: {{ .enabled }}
@@ -204,6 +203,7 @@ loki:
 
     {{- with .Values.loki.query_scheduler }}
     query_scheduler:
+      max_outstanding_requests_per_tenant: 10000
       {{- tpl (. | toYaml) $ | nindent 4 }}
     {{- end }}
 
