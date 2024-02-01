@@ -397,7 +397,8 @@ ingress:
   # -- The ingressClass to use. Will be converted to annotation if not yet supported.
   className: "traefik"
   # -- Extra, custom annotations
-  annotations: {}
+  annotations: 
+    cert-manager.io/cluster-issuer: letsencrypt-production
   # -- The ingress hostname for your matrix server.
   # Should align with the server_name and well_known_* hosts.
   # If not set, generated from the dendrite_config values.
