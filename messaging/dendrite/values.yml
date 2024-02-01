@@ -378,7 +378,7 @@ postgresql:
   enabled: true
   image:
     repository: bitnami/postgresql
-    tag: "15.1.0"
+    tag: "16.1.0"
   auth:
     username: dendrite
     password: changeme
