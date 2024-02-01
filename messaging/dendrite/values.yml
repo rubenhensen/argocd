@@ -266,9 +266,9 @@ dendrite_config:
     # -- enable reCAPTCHA registration
     enable_registration_captcha: true
     # -- reCAPTCHA public key
-    recaptcha_public_key: "6Lck1mMpAAAAANupL-m_xpgMt7xNLVMuyZ-baRqP"
+    recaptcha_public_key: "6Ldv12MpAAAAAINAPLU42bYr259BxT0yzIoa-NTh"
     # -- reCAPTCHA private key
-    recaptcha_private_key: "6Lck1mMpAAAAAJuOi4xvKd20O_YCLFFysG-VezoB"
+    recaptcha_private_key: "6Ldv12MpAAAAAGY1RSgij68H_eGmZa-bxgh9_PCQ"
     # -- reCAPTCHA bypass secret
     recaptcha_bypass_secret: ""
     recaptcha_siteverify_api: ""
