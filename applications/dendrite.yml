@@ -8,7 +8,7 @@ spec:
   sources:
   - chart: dendrite
     repoURL: https://matrix-org.github.io/dendrite/
-    targetRevision: 0.13.7
+    targetRevision: 0.13.4
     helm:
       releaseName: dendrite
       valueFiles:
