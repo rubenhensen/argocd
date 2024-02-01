@@ -77,6 +77,13 @@ grafana:
     - name: Loki
       type: loki
       url: http://loki:3100
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      labelValue: "1"
+      # Allow discovery in all namespaces for dashboards
+      searchNamespace: ALL
   
   ingress:
     enabled: true

@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus-grafana-alertmanager
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - chart: dendrite
+    repoURL: https://matrix-org.github.io/dendrite/
+    targetRevision: 0.13.7
+    helm:
+      releaseName: dendrite
+      valueFiles:
+        - $values/messaging/dendrite/values.yml
+  - repoURL: 'https://github.com/rubenhensen/argocd.git'
+    targetRevision: main
+    ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: monitoring
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    # - ServerSideApply=true
+    # - Replace=true
+    automated:
+      prune: true
+      selfHeal: true
