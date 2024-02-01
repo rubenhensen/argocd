@@ -264,7 +264,7 @@ dendrite_config:
     registration_shared_secret: ""
 
     # -- enable reCAPTCHA registration
-    enable_registration_captcha: false
+    enable_registration_captcha: true
     # -- reCAPTCHA public key
     recaptcha_public_key: "6Lck1mMpAAAAANupL-m_xpgMt7xNLVMuyZ-baRqP"
     # -- reCAPTCHA private key
