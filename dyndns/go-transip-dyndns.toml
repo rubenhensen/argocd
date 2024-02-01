@@ -158,6 +158,13 @@ content = "@"
 
 [[record]]
 hostname = "hensen.io"
+entry = "matrix"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
 entry = "grafana"
 ttl = 86400
 type = "CNAME"
