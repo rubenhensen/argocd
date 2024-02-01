@@ -253,7 +253,7 @@ dendrite_config:
   client_api:
     # -- Prevents new users from being able to register on this homeserver, except when
     # using the registration shared secret below.
-    registration_disabled: true
+    registration_disabled: false
 
     # Prevents new guest accounts from being created. Guest registration is also
     # disabled implicitly by setting 'registration_disabled' above.
@@ -261,14 +261,14 @@ dendrite_config:
 
     # -- If set, allows registration by anyone who knows the shared secret, regardless of
     # whether registration is otherwise disabled.
-    registration_shared_secret: "ditiseensecurityprobleem"
+    registration_shared_secret: ""
 
     # -- enable reCAPTCHA registration
     enable_registration_captcha: false
     # -- reCAPTCHA public key
-    recaptcha_public_key: ""
+    recaptcha_public_key: "6Lck1mMpAAAAANupL-m_xpgMt7xNLVMuyZ-baRqP"
     # -- reCAPTCHA private key
-    recaptcha_private_key: ""
+    recaptcha_private_key: "6Lck1mMpAAAAAJuOi4xvKd20O_YCLFFysG-VezoB"
     # -- reCAPTCHA bypass secret
     recaptcha_bypass_secret: ""
     recaptcha_siteverify_api: ""
