@@ -32,7 +32,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: ""
+  storageClass: "nfs-csi"
   jetstream:
     # -- Use an existing volume claim for jetstream
     existingClaim: ""
@@ -46,7 +46,7 @@ persistence:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    # storageClass: ""
+    storageClass: "nfs-csi"
   media:
     # -- Use an existing volume claim for media files
     existingClaim: ""
@@ -60,7 +60,7 @@ persistence:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    # storageClass: ""
+    storageClass: "nfs-csi"
   search:
     # -- Use an existing volume claim for the fulltext search index
     existingClaim: ""
@@ -74,7 +74,7 @@ persistence:
     ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
     ##   GKE, AWS & OpenStack)
     ##
-    # storageClass: ""
+    storageClass: "nfs-csi"
 
 # -- Add additional volumes to the Dendrite Pod
 extraVolumes: []
