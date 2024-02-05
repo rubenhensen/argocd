@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: appservice
+  name: appservice-cm
   namespace: default
 data:
   whatsapp-registration.yaml: |
