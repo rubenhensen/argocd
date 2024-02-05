@@ -77,19 +77,19 @@ persistence:
     storageClass: "nfs-csi"
 
 # -- Add additional volumes to the Dendrite Pod
-extraVolumes: 
-  - name: appservice
-    configMap:
-      name: appservice-cm
+extraVolumes: []
+  # - name: appservice
+  #   configMap:
+  #     name: appservice-cm
 # ex.
 # - name: extra-config
 #   secret:
 #     secretName: extra-config
 
 # -- Configure additional mount points volumes in the Dendrite Pod
-extraVolumeMounts: 
-  - mountpath: "/etc/dendrite/appservice"
-    name: appservice
+extraVolumeMounts: []
+  # - mountpath: "/etc/dendrite/appservice"
+  #   name: appservice
 # ex.
 # - mountPath: /etc/dendrite/extra-config
 #   name: extra-config
