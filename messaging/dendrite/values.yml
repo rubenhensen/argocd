@@ -253,8 +253,8 @@ dendrite_config:
     # to be sent to an insecure endpoint.
     disable_tls_validation: false
     # -- Appservice config files to load on startup. (**NOTE**: This is overriden by Helm, if a folder `./appservices/` exists)
-    config_files: 
-      - "/etc/dendrite/appservice/whatsapp-registration.yaml"
+    config_files: []
+      # - "/etc/dendrite/appservice/whatsapp-registration.yaml"
 
   client_api:
     # -- Prevents new users from being able to register on this homeserver, except when
