@@ -272,9 +272,9 @@ dendrite_config:
     # -- enable reCAPTCHA registration
     enable_registration_captcha: true
     # -- reCAPTCHA public key
-    recaptcha_public_key: ""
+    recaptcha_public_key: "adfa"
     # -- reCAPTCHA private key
-    recaptcha_private_key: ""
+    recaptcha_private_key: "asdf"
     # -- reCAPTCHA bypass secret
     recaptcha_bypass_secret: ""
     recaptcha_siteverify_api: ""
