@@ -88,7 +88,7 @@ extraVolumes:
 
 # -- Configure additional mount points volumes in the Dendrite Pod
 extraVolumeMounts:
-  - mountpath: /etc/dendrite/appservice
+  - mountPath: /etc/dendrite/appservice
     name: appservice
 # ex.
 # - mountPath: /etc/dendrite/extra-config
