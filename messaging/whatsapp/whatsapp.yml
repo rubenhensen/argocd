@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: whatsapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whatsapp
+  serviceName: "whatsapp-svc"
+  template:
+    metadata:
+      labels:
+        app: whatsapp
+    spec:
+      # affinity:
+        # nodeAffinity:
+        #   preferredDuringSchedulingIgnoredDuringExecution:
+        #     - weight: 1
+        #       preference: 
+        #         matchExpressions:
+        #         - key: rp_version
+        #           operator: In
+        #           values:
+        #           - "5"  
+      containers:
+        - image: dock.mau.dev/mautrix/whatsapp:latest
+          name: whatsapp
+          ports:
+            - containerPort: 29318
+              protocol: TCP
+              name: http
+          resources:
+            requests:
+              memory: "200Mi"
+              # cpu: "4000m"
+          volumeMounts:
+            - mountPath: /data
+              name: config
+
+
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 10
+      volumes:
+        - name: config
+          configMap:
+            name: whatsapp-config

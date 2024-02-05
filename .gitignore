@@ -13,3 +13,5 @@ haproxy/token.b64
 haproxy/ca.cert
 haproxy/cert.b64
 monitoring/prometheus-grafana-alertmanager.yml
+config.yaml
+registration.yaml

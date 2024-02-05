@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whatsapp
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rubenhensen/argocd.git
+    targetRevision: HEAD
+    path: messaging/whatsapp
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: messaging
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: whatsapp
+  namespace: whatsapp
+  labels:
+    app: whatsapp
+spec:
+  ports:
+    - port: 29318
+      protocol: TCP
+      targetPort: 29318
+      name: http
+  type: ClusterIP
+  selector:
+    app: whatsapp
+
+
