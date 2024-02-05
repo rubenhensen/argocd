@@ -26,6 +26,7 @@ spec:
       containers:
         - image: dock.mau.dev/mautrix/whatsapp:latest
           name: whatsapp
+          args: ["--no-update"]
           ports:
             - containerPort: 29318
               protocol: TCP
