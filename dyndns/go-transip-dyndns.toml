@@ -109,6 +109,13 @@ content = "@"
 
 [[record]]
 hostname = "hensen.io"
+entry = "plex"
+ttl = 86400
+type = "CNAME"
+content = "@"
+
+[[record]]
+hostname = "hensen.io"
 entry = "drive"
 ttl = 86400
 type = "CNAME"
