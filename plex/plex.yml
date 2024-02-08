@@ -31,7 +31,7 @@ spec:
       volumes:
         - name: library
           persistentVolumeClaim:
-            claimName: plex-library
+            claimName: plex-config
         - name: tv
           persistentVolumeClaim:
             claimName: plex-tv
