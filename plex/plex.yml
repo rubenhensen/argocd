@@ -24,7 +24,7 @@ spec:
           - name: VERSION
             value: docker
           - name: PLEX_CLAIM
-            value: claim--wEZyLH-Dbi8-eoR6gib
+            value: claim-sJEWEsVobFZQPUdWynhz
 
 
           volumeMounts:
