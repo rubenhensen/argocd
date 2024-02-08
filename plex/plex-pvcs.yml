@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: plex-config
+  labels:
+    app: plex-config
+spec:
+  storageClassName: nfs-csi # Change this to your storageClassName
+  # volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany # Change this to your accessModes
+  resources:
+    requests:
+      storage: 100Gi
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: plex-tv
+  labels:
+    app: plex-tv
+spec:
+  storageClassName: nfs-csi # Change this to your storageClassName
+  # volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany # Change this to your accessModes
+  resources:
+    requests:
+      storage: 300Gi
+
+--- 
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: plex-movies
+  labels:
+    app: plex-movies
+spec:
+  storageClassName: nfs-csi # Change this to your storageClassName
+  # volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany # Change this to your accessModes
+  resources:
+    requests:
+      storage: 300Gi

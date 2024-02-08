@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: plex
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  ingressClassName: traefik # or nginx, caddy, etc
+  tls:
+    - hosts:
+        - plex.hensen.io
+      secretName: letsencrypt-production.key
+  rules:
+    - host: blog.hensen.io
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: plex
+                port:
+                  name: plex
+
