@@ -15,8 +15,8 @@ spec:
     - host: plex.hensen.io
       http:
         paths:
-          - path: /
-            pathType: ImplementationSpecific
+          - path: /web
+            pathType: Prefix
             backend:
               service:
                 name: plex
