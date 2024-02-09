@@ -13,4 +13,23 @@ spec:
   selector:
     app: plex
 
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-nodeport
+  labels:
+    app: plex-nodeport
+spec:
+  type: NodePort
+  ports:
+    - port: 32400
+      protocol: TCP
+      targetPort: 32400
+      nodePort: 32400
+      name: plex
+  selector:
+    app: plex
+
 
