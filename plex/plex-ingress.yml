@@ -22,14 +22,4 @@ spec:
                 name: plex
                 port:
                   name: plex
-    - host: 192.168.1.200
-      http:
-        paths:
-          - path: /
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: plex
-                port:
-                  name: plex
 
