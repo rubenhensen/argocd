@@ -226,7 +226,7 @@ prometheus:
     serviceMonitorSelectorNilUsesHelmValues: false
     podMonitorSelectorNilUsesHelmValues: false
     probeSelectorNilUsesHelmValues: false
-    retention: 6h
+    retention: 30d
     enableAdminAPI: true
     walCompression: true
     resources: 
