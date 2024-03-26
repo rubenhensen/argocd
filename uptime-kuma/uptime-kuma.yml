@@ -28,4 +28,4 @@ spec:
       volumes:
         - name: kuma-pvc
           persistentVolumeClaim:
-            claimName: kuma-pvc
+            claimName: kuma-pvc-local
