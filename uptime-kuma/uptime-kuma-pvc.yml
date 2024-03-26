@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: kuma-pvc-local
+  name: kuma-pvc-local2
   labels:
-    app: kuma-pvc-local
+    app: kuma-pvc-local2
 spec:
   storageClassName: local-storage # Change this to your storageClassName
   # volumeMode: Filesystem
