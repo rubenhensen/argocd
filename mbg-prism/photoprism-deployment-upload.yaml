@@ -99,7 +99,7 @@ spec:
             - name: PHOTOPRISM_WORKERS
               value: "4"
             - name: PHOTOPRISM_CORS_ORIGIN
-              value: *
+              value: "*"
           image: photoprism/photoprism:latest
           name: mbg-photoprism-upload
           ports:
